@@ -35,12 +35,10 @@
     display: block;
   }
 
-  html {
-    font-family: "Outfit", sans-serif;
-  }
-
   body {
     line-height: 1;
+    font-size: 0.875rem;
+    line-height: 1.5rem;
   }
 
   ol, ul {
@@ -63,6 +61,21 @@
   }
 }
 
+/* FONT FAMILY */
+@font-face {
+  font-family: 'CustomFont';
+  src: url('/fonts/NimbusSanL-Reg.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CustomFont';
+  src: url('/fonts/NimbusSanL-Bol.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
 @layer utilities {
   /* TYPOGRAPHY */
   .heading-lg {
@@ -75,10 +88,5 @@
 
   .heading-sm {
     font-size: 1rem;
-  }
-
-  .body-text {
-    font-size: 0.875rem;
-    line-height: 1.5rem;
   }
 }
