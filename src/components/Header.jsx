@@ -18,18 +18,24 @@ const Header = () => {
               </li>
             );
           })}
-          <button className="ml-4 px-6 h-12 bg-black text-white rounded-full hover:opacity-60 font-bold">
+          <button className="ml-4 px-6 h-12 bg-black text-white rounded-full hover:opacity-60 font-bold transition-opacity">
             Resume
           </button>
         </ul>
       </nav>
-      <button className="px-4 sm:hidden font-bold">Menu</button>
+      <button className="px-4 sm:hidden font-bold hover:opacity-60 transition-opacity">
+        Menu
+      </button>
     </div>
   );
 };
 
 const NavLink = ({ label }) => {
-  return <a className="px-4 hover:opacity-60 cursor-pointer">{label}</a>;
+  return (
+    <a className="px-4 hover:opacity-60 cursor-pointer transition-opacity">
+      {label}
+    </a>
+  );
 };
 
 export default Header;
