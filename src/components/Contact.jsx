@@ -14,7 +14,7 @@ const Contact = () => {
           </label>
           <input
             type="text"
-            className="w-full p-2 text-sm rounded-md border border-solid border-black/10 focus:outline-none focus:border-black/80 focus:ring-1 focus:ring-black/80"
+            className="w-full p-2 text-sm rounded-md border border-solid border-black/10"
           />
         </div>
         <div className="mb-4">
