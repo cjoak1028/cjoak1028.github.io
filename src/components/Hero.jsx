@@ -3,7 +3,7 @@ import { TypeAnimation } from "react-type-animation";
 
 const Hero = () => {
   return (
-    <div className="h-[calc(100vh-6.875rem)] sm:h-[calc(100vh-8.875rem)] pl-10 sm:pl-16 lg:pl-44 2xl:pl-80 flex items-center bg-white">
+    <section className="h-[calc(100vh-6.875rem)] sm:h-[calc(100vh-8.875rem)] pl-10 sm:pl-16 lg:pl-44 2xl:pl-80 flex items-center bg-white">
       <div className="-translate-y-10">
         <img
           src={HeroImage}
@@ -24,7 +24,7 @@ const Hero = () => {
           className="heading-lg whitespace-nowrap"
         />
       </div>
-    </div>
+    </section>
   );
 };
 

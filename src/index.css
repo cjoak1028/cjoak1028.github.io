@@ -92,6 +92,7 @@
 
   .heading-md {
     font-size: 1.125rem;
+    @apply font-bold;
   }
 
   .heading-sm {

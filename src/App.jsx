@@ -10,7 +10,7 @@ function App() {
         <Header />
         <Banner />
       </div>
-      <main className="">
+      <main>
         <Hero />
         <About />
       </main>
