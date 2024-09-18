@@ -40,7 +40,9 @@ const About = () => {
           </li>
         ))}
       </ul>
-      <a className="self-end font-medium">View Resume &rarr;</a>
+      <a className="self-end font-medium hover:opacity-60 transition-opacity">
+        View Resume &rarr;
+      </a>
     </section>
   );
 };
