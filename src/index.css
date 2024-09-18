@@ -92,6 +92,11 @@
 
   .heading-md {
     font-size: 1.125rem;
+    @apply font-semibold;
+
+    @media (width >= 640px) {
+      font-size: 1.25rem;
+    }
   }
 
   .heading-sm {
