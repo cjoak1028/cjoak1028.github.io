@@ -9,7 +9,7 @@ function App() {
         <Header />
         <Banner />
       </div>
-      <main className="mt-[6.875rem]">
+      <main className="mt-[6.875rem] sm:mt-[8.875rem]">
         <Hero />
       </main>
     </div>

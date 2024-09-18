@@ -80,7 +80,14 @@
   /* TYPOGRAPHY */
   .heading-lg {
     font-size: 2rem;
+    
+    @media (width >= 640px) {
+      font-size: 3.125rem;
+    }
 
+    @media (width >= 768px) {
+      font-size: 4.375rem;
+    }
   }
 
   .heading-md {
