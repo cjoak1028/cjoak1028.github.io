@@ -1,16 +1,18 @@
 import Header from "./components/Header";
 import Banner from "./components/Banner";
 import Hero from "./components/Hero";
+import About from "./components/About";
 
 function App() {
   return (
     <div className="font-sans">
-      <div className="fixed w-full top-0 left-0">
+      <div className="sticky top-0 z-10">
         <Header />
         <Banner />
       </div>
-      <main className="mt-[6.875rem] sm:mt-[8.875rem]">
+      <main className="">
         <Hero />
+        <About />
       </main>
     </div>
   );
