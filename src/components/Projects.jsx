@@ -1,3 +1,5 @@
+import useFetchData from "../hooks/useFetchData";
+
 import EntertainmentThumbnail from "../assets/projects/entertainment.jpg";
 import DictionaryThumbnail from "../assets/projects/dictionary.jpg";
 import PhotosnapThumbnail from "../assets/projects/photosnap.jpg";
@@ -5,46 +7,43 @@ import PlanetsThumbnail from "../assets/projects/planets.jpg";
 import GithubLogo from "../assets/logos/github-logo.svg";
 import ExtLinkIcon from "../assets/ext-link.svg";
 
+const imageMap = {
+  entertainment: EntertainmentThumbnail,
+  dictionary: DictionaryThumbnail,
+  photosnap: PhotosnapThumbnail,
+  planets: PlanetsThumbnail,
+};
+
 const Projects = () => {
+  const path = "/data/projects.json";
+  const [data, loading, error] = useFetchData(path);
+
   return (
-    <section className="py-24 flex flex-col gap-10 sm:gap-5 max-w-[32.5rem]">
+    <section className="py-24 flex flex-col gap-10 sm:gap-5 max-w-[32.5rem] items-center">
       <div>
         <h2 className="heading-md mb-2">Projects 🧑🏻‍💻</h2>
         <h3 className="heading-sm">
           Here are some projects that I put my heart and soul into!
         </h3>
       </div>
-      <Project
-        title="1. Entertainment Web App"
-        thumbnail={EntertainmentThumbnail}
-        description="An entertainment web app that allows users to browse and bookmark movies and TV shows"
-        stack={["React", "Tailwind CSS"]}
-        repoLink="https://github.com/cjoak1028/entertainment-web-app"
-      />
-      <Project
-        title="2. Dictionary"
-        thumbnail={DictionaryThumbnail}
-        description="A dictionary web app integrated with the Free Dictionary API"
-        stack={["React", "Tailwind CSS"]}
-        repoLink="https://github.com/cjoak1028/dictionary-web-app"
-        demoLink="https://dictionary-web-app-7wod.vercel.app/"
-      />
-      <Project
-        title="3. Photosnap"
-        thumbnail={PhotosnapThumbnail}
-        description="A multi-page marketing website for a photo-sharing application"
-        stack={["HTML", "Sass", "JavaScript"]}
-        repoLink="https://github.com/cjoak1028/photosnap-multi-page-website"
-        demoLink="https://photosnap-multi-page-website-theta.vercel.app/"
-      />
-      <Project
-        title="4. Planets"
-        thumbnail={PlanetsThumbnail}
-        description="A multi-page website showcasing each planet in our solar system"
-        stack={["HTML", "Sass", "JavaScript"]}
-        repoLink="https://github.com/cjoak1028/planets-fact-site"
-        demoLink="https://planets-fact-site-sand.vercel.app/"
-      />
+      {loading && <p>Loading...</p>}
+      {error && <p>Something went wrong 😢</p>}
+      {data &&
+        data.map((project, index) => {
+          const { title, thumbnail, description, stack, repoLink, demoLink } =
+            project;
+          return (
+            <Project
+              key={`${title}${index}`}
+              title={`${index + 1}. ${title}`}
+              thumbnail={imageMap[thumbnail]}
+              description={description}
+              stack={stack}
+              repoLink={repoLink}
+              demoLink={demoLink}
+            />
+          );
+        })}
     </section>
   );
 };
@@ -69,13 +68,13 @@ const Project = ({
       </ul>
       <div className="flex flex-row gap-7">
         <a
-          className="flex flex-row items-center gap-2 font-medium"
+          className="flex flex-row items-center gap-2 font-medium hover:opacity-60 cursor-pointer"
           href={repoLink}
         >
           Code <img src={GithubLogo} className="h-5" />
         </a>
         <a
-          className="flex flex-row items-center gap-2 font-medium"
+          className="flex flex-row items-center gap-2 font-medium hover:opacity-60 cursor-pointer"
           href={demoLink}
         >
           Demo <img src={ExtLinkIcon} className="h-5" />
