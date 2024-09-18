@@ -6,9 +6,9 @@ const Banner = () => {
     <Marquee
       autoFill={true}
       speed={40}
-      className="bg-black h-[3.125rem] sm:h-[3.75rem]"
+      className="bg-black h-10 sm:h-[3.125rem]"
     >
-      <p className="text-white uppercase md:text-base">
+      <p className="text-white uppercase">
         <span className="font-bold">open to work</span>
         <Dot />
         open to work <Dot />

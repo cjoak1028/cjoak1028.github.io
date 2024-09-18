@@ -38,7 +38,7 @@ const About = () => {
           Tech Stack
         </h2>
         <span className="heading-md hidden sm:block opacity-40">|</span>
-        <ul className="flex flex-row gap-5 sm:gap-8 py-4">
+        <ul className="flex flex-row gap-6 sm:gap-8 py-4">
           {Object.entries(logos).map(([key, value]) => (
             <li key={key}>
               <TechLogo path={value} tech={key} />
