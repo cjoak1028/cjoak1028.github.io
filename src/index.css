@@ -79,7 +79,8 @@
 @layer utilities {
   /* TYPOGRAPHY */
   .heading-lg {
-    font-size: 1.75rem;
+    font-size: 2rem;
+
   }
 
   .heading-md {
