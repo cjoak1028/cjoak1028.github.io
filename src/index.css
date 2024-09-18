@@ -39,6 +39,7 @@
     line-height: 1;
     font-size: 0.875rem;
     line-height: 1.5rem;
+    @apply font-light
   }
 
   ol, ul {
@@ -100,6 +101,10 @@
   }
 
   .heading-sm {
-    font-size: 1rem;
+    font-size: 0.875rem;
+
+    @media (width >= 640px) {
+      font-size: 1rem;
+    }
   }
 }

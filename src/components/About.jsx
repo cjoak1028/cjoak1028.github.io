@@ -34,10 +34,10 @@ const About = () => {
         ritual of solving a LeetCode problem!
       </p>
       <div className="flex flex-row items-center justify-center sm:gap-8 font-medium">
-        <h2 className="heading-md uppercase hidden sm:inline-block opacity-40">
+        <h2 className="heading-sm uppercase hidden sm:inline-block opacity-40">
           Tech Stack
         </h2>
-        <span className="heading-md hidden sm:block opacity-40">|</span>
+        <span className="heading-sm hidden sm:block opacity-40">|</span>
         <ul className="flex flex-row gap-6 sm:gap-8 py-4">
           {Object.entries(logos).map(([key, value]) => (
             <li key={key}>
