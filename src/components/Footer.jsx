@@ -8,19 +8,19 @@ const Footer = () => {
       <div className="flex flex-row gap-5 md:gap-7">
         <a
           href="https://www.linkedin.com/in/cj-kim-966351255/"
-          className="hover:opacity-60 cursor-pointer"
+          className="hover:opacity-60 cursor-pointer transition-opacity"
         >
           <img src={LinkedInLogo} className="h-6 md:h-7" />
         </a>
         <a
           href="https://github.com/cjoak1028"
-          className="hover:opacity-60 cursor-pointer"
+          className="hover:opacity-60 cursor-pointer transition-opacity"
         >
           <img src={GithubLogo} className="h-6 md:h-7" />
         </a>
         <a
           href="https://www.instagram.com/chng.juce/"
-          className="hover:opacity-60 cursor-pointer"
+          className="hover:opacity-60 cursor-pointer transition-opacity"
         >
           <img src={InstagramLogo} className="h-6 md:h-7" />
         </a>
