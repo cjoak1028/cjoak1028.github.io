@@ -10,8 +10,8 @@ function App() {
         <Header />
         <Banner />
       </div>
-      <main>
-        <Hero />
+      <Hero />
+      <main className="px-4 flex flex-col items-center">
         <About />
       </main>
     </div>

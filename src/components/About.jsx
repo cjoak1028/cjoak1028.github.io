@@ -21,7 +21,7 @@ const About = () => {
   );
 
   return (
-    <section className="px-4 py-24 flex flex-col gap-3">
+    <section className="py-24 flex flex-col gap-3 sm:gap-5 max-w-[32.5rem]">
       <h2 className="heading-md">About me ✌️</h2>
       <img src={AboutImage} className="w-full h-auto" alt="About me" />
       <p>
@@ -33,15 +33,24 @@ const About = () => {
         on a little trip, but that doesn’t stop me from sticking to my daily
         ritual of solving a LeetCode problem!
       </p>
-      <ul className="flex flex-row gap-5 self-center py-4">
-        {Object.entries(logos).map(([key, value]) => (
-          <li key={key}>
-            <TechLogo path={value} tech={key} />
-          </li>
-        ))}
-      </ul>
-      <a className="self-end font-medium hover:opacity-60 transition-opacity">
-        View Resume &rarr;
+      <div className="flex flex-row items-center justify-center sm:gap-8 font-medium">
+        <h2 className="heading-md uppercase hidden sm:inline-block opacity-40">
+          Tech Stack
+        </h2>
+        <span className="heading-md hidden sm:block opacity-40">|</span>
+        <ul className="flex flex-row gap-5 sm:gap-8 py-4">
+          {Object.entries(logos).map(([key, value]) => (
+            <li key={key}>
+              <TechLogo path={value} tech={key} />
+            </li>
+          ))}
+        </ul>
+      </div>
+      <a className="self-end font-medium hover:opacity-60 transition-opacity cursor-pointer group">
+        View Resume{" "}
+        <span className="inline-block transition-transform transform group-hover:translate-x-2">
+          &rarr;
+        </span>
       </a>
     </section>
   );
