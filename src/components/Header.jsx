@@ -13,7 +13,7 @@ const Header = () => {
     );
   };
 
-  const handleMenuClick = () => {
+  const handleMenuState = () => {
     setIsMenuOpen((prevState) => !prevState);
   };
 
@@ -39,16 +39,49 @@ const Header = () => {
           </ul>
         </nav>
         <button
-          className="sm:hidden font-medium hover:opacity-60 transition-opacity"
-          onClick={handleMenuClick}
+          className="inline-flex w-6 h-6 text-slate-800 bg-white text-center items-center justify-center rounded transition"
+          onClick={handleMenuState}
         >
-          {isMenuOpen ? "Close" : "Menu"}
+          <span className="sr-only">Menu</span>
+          <svg
+            className="w-4 h-4 fill-current pointer-events-none"
+            viewBox="0 0 16 16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect
+              className={`origin-center -translate-y-[5px] translate-x-[7px] transition-all duration-300 ease-[cubic-bezier(.5,.85,.25,1.1)] ${
+                isMenuOpen && "translate-x-0 translate-y-0 rotate-[315deg]"
+              }`}
+              y="7"
+              width="9"
+              height="2"
+              rx="1"
+            ></rect>
+            <rect
+              className={`origin-center transition-all duration-300 ease-[cubic-bezier(.5,.85,.25,1.8)] ${
+                isMenuOpen && "rotate-45"
+              }`}
+              y="7"
+              width="16"
+              height="2"
+              rx="1"
+            ></rect>
+            <rect
+              className={`origin-center translate-y-[5px] transition-all duration-300 ease-[cubic-bezier(.5,.85,.25,1.1)] ${
+                isMenuOpen && "translate-y-0 rotate-[135deg]"
+              }`}
+              y="7"
+              width="9"
+              height="2"
+              rx="1"
+            ></rect>
+          </svg>
         </button>
       </div>
       {isMenuOpen && (
         <div
           className="h-full bg-black/50 z-10 fixed top-[3.75rem] left-0 w-full sm:hidden"
-          onClick={handleMenuClick}
+          onClick={handleMenuState}
         >
           <span className="h-0.5 w-full bg-gray-50 block"></span>
           <nav className="bg-white p-8" onClick={(e) => e.stopPropagation()}>
