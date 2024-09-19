@@ -37,10 +37,7 @@ const Contact = () => {
           ></textarea>
         </div>
         <div className="text-end">
-          <button
-            type="submit"
-            className="px-6 h-12 bg-black text-white rounded-full hover:opacity-60 font-medium transition-opacity"
-          >
+          <button type="submit" className="primary-button">
             Send message
           </button>
         </div>

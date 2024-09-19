@@ -78,7 +78,6 @@
 }
 
 @layer utilities {
-  /* TYPOGRAPHY */
   .heading-lg {
     font-size: 2rem;
     
@@ -98,5 +97,9 @@
 
   .heading-sm {
     font-size: 1rem;
+  }
+
+  .primary-button {
+    @apply px-6 h-12 bg-black text-white rounded-full hover:opacity-60 font-medium transition-opacity;
   }
 }

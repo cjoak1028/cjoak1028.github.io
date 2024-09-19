@@ -28,9 +28,7 @@ const Header = () => {
               </li>
             );
           })}
-          <button className="ml-4 px-6 h-12 bg-black text-white rounded-full hover:opacity-60 font-medium transition-opacity">
-            Resume
-          </button>
+          <a className="ml-4 flex items-center primary-button">Resume</a>
         </ul>
       </nav>
       <button className="px-4 sm:hidden font-medium hover:opacity-60 transition-opacity">
