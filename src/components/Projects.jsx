@@ -81,13 +81,13 @@ const Project = ({
         </ul>
         <div className="flex flex-row gap-7">
           <a
-            className="flex flex-row items-center gap-2 hover:opacity-60 cursor-pointer font-normal"
+            className="flex flex-row items-center gap-2 hover:opacity-60 cursor-pointer font-normal transition-opacity"
             href={repoLink}
           >
             Code <img src={GithubLogo} className="h-5" />
           </a>
           <a
-            className="flex flex-row items-center gap-2 hover:opacity-60 cursor-pointer font-normal"
+            className="flex flex-row items-center gap-2 hover:opacity-60 cursor-pointer font-normal transition-opacity"
             href={demoLink}
           >
             Demo <img src={ExtLinkIcon} className="h-5" />
