@@ -27,7 +27,7 @@ const Footer = () => {
           );
         })}
       </div>
-      <p className="text-black/40">Designed & Built by CJ Kim</p>
+      <p className="text-black/40 text-xs">Designed & Built by CJ Kim</p>
     </div>
   );
 };

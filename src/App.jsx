@@ -14,7 +14,7 @@ function App() {
         <Banner />
       </div>
       <Hero />
-      <main className="px-4 flex flex-col items-center">
+      <main className="px-6 flex flex-col items-center">
         <About />
         <Projects />
         <Contact />
