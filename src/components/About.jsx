@@ -21,7 +21,7 @@ const About = () => {
   );
 
   return (
-    <section className="py-8 sm:py-24 flex flex-col gap-3 sm:gap-5 max-w-96 sm:max-w-[32.5rem]">
+    <section className="content gap-3 sm:gap-5 max-w-96 sm:max-w-[32.5rem]">
       <h2 className="heading-md">About me ✌️</h2>
       <img src={AboutImage} className="w-full h-auto" alt="About me" />
       <p>

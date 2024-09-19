@@ -62,44 +62,24 @@
   }
 }
 
-/* FONT FAMILY */
-@font-face {
-  font-family: 'CustomFont';
-  src: url('/fonts/NimbusSanL-Reg.otf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'CustomFont';
-  src: url('/fonts/NimbusSanL-Bol.otf') format('opentype');
-  font-weight: bold;
-  font-style: normal;
-}
-
 @layer utilities {
   .heading-lg {
-    font-size: 2rem;
-    
-    @media (width >= 640px) {
-      font-size: 3.125rem;
-    }
-
-    @media (width >= 768px) {
-      font-size: 4.375rem;
-    }
+    @apply text-[2rem] sm:text-[3.125rem] md:text-[4.375rem];
   }
 
   .heading-md {
-    font-size: 1.25rem;
-    @apply font-semibold;
+    @apply text-xl font-semibold;
   }
 
   .heading-sm {
-    font-size: 1rem;
+    @apply text-base font-medium;
   }
 
   .primary-button {
     @apply px-6 h-12 bg-black text-white rounded-full hover:opacity-60 font-medium transition-opacity;
+  }
+
+  .content {
+    @apply py-8 sm:py-24 flex flex-col;
   }
 }

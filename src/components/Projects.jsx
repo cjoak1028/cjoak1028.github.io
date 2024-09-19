@@ -19,7 +19,7 @@ const Projects = () => {
   const [data, loading, error] = useFetchData(path);
 
   return (
-    <section className="py-8 sm:py-24 flex flex-col gap-10 md:gap-14 items-center max-w-96 md:max-w-2xl">
+    <section className="content gap-10 md:gap-14 items-center max-w-96 md:max-w-2xl">
       <div className="w-full">
         <h2 className="heading-md mb-2">Projects 🧑🏻‍💻</h2>
         <h3 className="heading-sm leading-snug opacity-60">
@@ -73,9 +73,7 @@ const Project = ({
         />
       </div>
       <div className="flex flex-col gap-3 items-center md:w-2/5 md:justify-between md:h-5/6 self-center">
-        <h4 className="text-base font-medium hidden md:block text-center">
-          {title}
-        </h4>
+        <h4 className="heading-sm hidden md:block text-center">{title}</h4>
         <p className="text-center leading-snug font-light">{description}</p>
         <ul className="flex flex-row gap-3 opacity-60 uppercase">
           {stack.map((tech, index) => (

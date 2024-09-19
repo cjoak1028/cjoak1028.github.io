@@ -1,6 +1,6 @@
 const Contact = () => {
   return (
-    <section className="py-8 sm:py-24 flex flex-col gap-10 w-full max-w-lg">
+    <section className="content gap-10 w-full max-w-lg">
       <div>
         <h2 className="heading-md mb-2">Contact 👋</h2>
         <h3 className="heading-sm leading-snug opacity-60">
