@@ -92,19 +92,11 @@
   }
 
   .heading-md {
-    font-size: 1.125rem;
+    font-size: 1.25rem;
     @apply font-semibold;
-
-    @media (width >= 640px) {
-      font-size: 1.25rem;
-    }
   }
 
   .heading-sm {
-    font-size: 0.875rem;
-
-    @media (width >= 640px) {
-      font-size: 1rem;
-    }
+    font-size: 1rem;
   }
 }

@@ -1,10 +1,10 @@
 import useFetchData from "../hooks/useFetchData";
 
-import EntertainmentThumbnail from "../assets/projects/entertainment.jpg";
-import DictionaryThumbnail from "../assets/projects/dictionary.jpg";
-import PhotosnapThumbnail from "../assets/projects/photosnap.jpg";
-import PlanetsThumbnail from "../assets/projects/planets.jpg";
-import GithubLogo from "../assets/logos/github-logo.svg";
+import EntertainmentThumbnail from "../assets/thumbnails/entertainment.jpg";
+import DictionaryThumbnail from "../assets/thumbnails/dictionary.jpg";
+import PhotosnapThumbnail from "../assets/thumbnails/photosnap.jpg";
+import PlanetsThumbnail from "../assets/thumbnails/planets.jpg";
+import GithubIcon from "../assets/logos/github-logo.svg";
 import ExtLinkIcon from "../assets/ext-link.svg";
 
 const imageMap = {
@@ -19,10 +19,10 @@ const Projects = () => {
   const [data, loading, error] = useFetchData(path);
 
   return (
-    <section className="py-24 flex flex-col gap-10 md:gap-14 items-center max-w-96 md:max-w-2xl">
+    <section className="py-8 sm:py-24 flex flex-col gap-10 md:gap-14 items-center max-w-96 md:max-w-2xl">
       <div className="w-full">
         <h2 className="heading-md mb-2">Projects 🧑🏻‍💻</h2>
-        <h3 className="heading-sm leading-snug ">
+        <h3 className="heading-sm leading-snug opacity-60">
           Here are some projects that I put my heart and soul into!
         </h3>
       </div>
@@ -34,7 +34,7 @@ const Projects = () => {
             project;
           return (
             <Project
-              key={`${title}${index}`}
+              key={title}
               title={`${index + 1}. ${title}`}
               thumbnail={imageMap[thumbnail]}
               description={description}
@@ -66,35 +66,41 @@ const Project = ({
     >
       <div className="flex flex-col gap-3 md:w-3/5">
         <h4 className="text-base font-medium self-start md:hidden">{title}</h4>
-        <img className="w-full h-auto shadow-md" src={thumbnail} />
+        <img
+          className="w-full h-auto shadow-md"
+          src={thumbnail}
+          alt={`${title} thumbnail`}
+        />
       </div>
       <div className="flex flex-col gap-3 items-center md:w-2/5 md:justify-between md:h-5/6 self-center">
         <h4 className="text-base font-medium hidden md:block text-center">
           {title}
         </h4>
         <p className="text-center leading-snug font-light">{description}</p>
-
-        <ul className="flex flex-row gap-3 opacity-40 uppercase">
+        <ul className="flex flex-row gap-3 opacity-60 uppercase">
           {stack.map((tech, index) => (
             <li key={`${tech}${index}`}>{tech}</li>
           ))}
         </ul>
         <div className="flex flex-row gap-7">
-          <a
-            className="flex flex-row items-center gap-2 hover:opacity-60 cursor-pointer font-normal transition-opacity"
-            href={repoLink}
-          >
-            Code <img src={GithubLogo} className="h-5" />
-          </a>
-          <a
-            className="flex flex-row items-center gap-2 hover:opacity-60 cursor-pointer font-normal transition-opacity"
-            href={demoLink}
-          >
-            Demo <img src={ExtLinkIcon} className="h-5" />
-          </a>
+          <TextIconLink text="Code" icon={GithubIcon} link={repoLink} />
+          <TextIconLink text="Demo" icon={ExtLinkIcon} link={demoLink} />
         </div>
       </div>
     </div>
+  );
+};
+
+const TextIconLink = ({ text, icon, link }) => {
+  return (
+    <a
+      className="flex flex-row items-center gap-2 hover:opacity-60 cursor-pointer font-normal transition-opacity"
+      href={link}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      {text} <img src={icon} className="h-5" />
+    </a>
   );
 };
 
