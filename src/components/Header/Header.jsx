@@ -2,6 +2,7 @@ import { useState, useRef } from "react";
 import NavLink from "./NavLink";
 import HamburgerButton from "./HamburgerButton";
 import MobileMenu from "./MobileMenu";
+import Banner from "./Banner";
 import LogoImage from "../../assets/logo-profile.jpg";
 
 const Header = ({ navLinks = ["About", "Projects", "Contact"] }) => {
@@ -49,6 +50,7 @@ const Header = ({ navLinks = ["About", "Projects", "Contact"] }) => {
         </nav>
         <HamburgerButton onClick={handleMenuState} isOpen={isButtonOpen} />
       </div>
+      <Banner />
       <MobileMenu
         isMenuOpen={isMenuOpen}
         navLinks={navLinks}
