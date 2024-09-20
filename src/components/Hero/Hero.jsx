@@ -1,4 +1,4 @@
-import HeroImage from "../assets/hero-profile.jpg";
+import HeroImage from "../../assets/hero-profile.jpg";
 import { TypeAnimation } from "react-type-animation";
 
 const Hero = () => {

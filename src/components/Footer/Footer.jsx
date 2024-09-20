@@ -1,6 +1,7 @@
-import LinkedInIcon from "../assets/logos/linkedin-logo.svg";
-import GithubIcon from "../assets/logos/github-logo.svg";
-import InstagramIcon from "../assets/logos/instagram-logo.svg";
+import LinkedInIcon from "../../assets/logos/linkedin-logo.svg";
+import GithubIcon from "../../assets/logos/github-logo.svg";
+import InstagramIcon from "../../assets/logos/instagram-logo.svg";
+import SocialLink from "../Shared/SocialLink";
 
 const socialLinks = [
   {
@@ -27,22 +28,8 @@ const Footer = () => {
           );
         })}
       </div>
-      <p className="text-black/40">Designed & Built by CJ Kim</p>
+      <p className="text-black/40 text-xs">Designed & Built by CJ Kim</p>
     </div>
-  );
-};
-
-const SocialLink = ({ social, link, icon }) => {
-  return (
-    <a
-      href={link}
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label={`Link to CJ's ${social}`}
-      className="hover:opacity-60 cursor-pointer transition-opacity"
-    >
-      <img src={icon} alt={`${social} icon`} className="h-6 md:h-7" />
-    </a>
   );
 };
 

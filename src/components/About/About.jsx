@@ -1,10 +1,10 @@
-import AboutImage from "../assets/about-image.jpg";
-import HtmlLogo from "../assets/logos/html-logo.svg";
-import CssLogo from "../assets/logos/css-logo.svg";
-import JsLogo from "../assets/logos/js-logo.svg";
-import ReactLogo from "../assets/logos/react-logo.svg";
-import SassLogo from "../assets/logos/sass-logo.svg";
-import TailwindLogo from "../assets/logos/tailwind-logo.svg";
+import AboutImage from "../../assets/about-image.jpg";
+import HtmlLogo from "../../assets/logos/html-logo.svg";
+import CssLogo from "../../assets/logos/css-logo.svg";
+import JsLogo from "../../assets/logos/js-logo.svg";
+import ReactLogo from "../../assets/logos/react-logo.svg";
+import SassLogo from "../../assets/logos/sass-logo.svg";
+import TailwindLogo from "../../assets/logos/tailwind-logo.svg";
 
 const About = () => {
   const logos = {
@@ -46,7 +46,12 @@ const About = () => {
           ))}
         </ul>
       </div>
-      <a className="self-end font-medium hover:opacity-60 transition-opacity cursor-pointer group">
+      <a
+        className="self-end font-medium hover:opacity-60 transition-opacity cursor-pointer group"
+        target="_blank"
+        rel="noopener noreferrer"
+        href="/resume.pdf"
+      >
         View Resume{" "}
         <span className="inline-block transition-transform transform group-hover:translate-x-2">
           &rarr;
