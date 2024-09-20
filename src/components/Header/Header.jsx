@@ -4,10 +4,9 @@ import HamburgerButton from "./HamburgerButton";
 import MobileMenu from "./MobileMenu";
 import LogoImage from "../../assets/logo-profile.jpg";
 
-const Header = () => {
+const Header = ({ navLinks = ["About", "Projects", "Contact"] }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isButtonOpen, setIsButtonOpen] = useState(false);
-  const navLinks = ["About", "Projects", "Contact"];
   const overlayRef = useRef(null);
 
   const handleMenuState = () => {
@@ -48,10 +47,7 @@ const Header = () => {
             <a className="ml-4 flex items-center primary-button">Resume</a>
           </ul>
         </nav>
-        <HamburgerButton
-          onClick={handleMenuState}
-          isButtonOpen={isButtonOpen}
-        />
+        <HamburgerButton onClick={handleMenuState} isOpen={isButtonOpen} />
       </div>
       <MobileMenu
         isMenuOpen={isMenuOpen}

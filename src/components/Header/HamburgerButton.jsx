@@ -1,4 +1,4 @@
-const HamburgerButton = ({ onClick, isButtonOpen }) => {
+const HamburgerButton = ({ onClick, isOpen }) => {
   return (
     <button
       className="inline-flex sm:hidden w-6 h-6 text-slate-800 bg-white text-center items-center justify-center rounded transition"
@@ -12,7 +12,7 @@ const HamburgerButton = ({ onClick, isButtonOpen }) => {
       >
         <rect
           className={`origin-center -translate-y-[5px] translate-x-[7px] transition-all duration-300 ease-[cubic-bezier(.5,.85,.25,1.1)] ${
-            isButtonOpen && "translate-x-0 translate-y-0 rotate-[315deg]"
+            isOpen && "translate-x-0 translate-y-0 rotate-[315deg]"
           }`}
           y="7"
           width="9"
@@ -21,7 +21,7 @@ const HamburgerButton = ({ onClick, isButtonOpen }) => {
         ></rect>
         <rect
           className={`origin-center transition-all duration-300 ease-[cubic-bezier(.5,.85,.25,1.8)] ${
-            isButtonOpen && "rotate-45"
+            isOpen && "rotate-45"
           }`}
           y="7"
           width="16"
@@ -30,7 +30,7 @@ const HamburgerButton = ({ onClick, isButtonOpen }) => {
         ></rect>
         <rect
           className={`origin-center translate-y-[5px] transition-all duration-300 ease-[cubic-bezier(.5,.85,.25,1.1)] ${
-            isButtonOpen && "translate-y-0 rotate-[135deg]"
+            isOpen && "translate-y-0 rotate-[135deg]"
           }`}
           y="7"
           width="9"
