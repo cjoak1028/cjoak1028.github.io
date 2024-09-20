@@ -46,7 +46,12 @@ const About = () => {
           ))}
         </ul>
       </div>
-      <a className="self-end font-medium hover:opacity-60 transition-opacity cursor-pointer group">
+      <a
+        className="self-end font-medium hover:opacity-60 transition-opacity cursor-pointer group"
+        target="_blank"
+        rel="noopener noreferrer"
+        href="/resume.pdf"
+      >
         View Resume{" "}
         <span className="inline-block transition-transform transform group-hover:translate-x-2">
           &rarr;

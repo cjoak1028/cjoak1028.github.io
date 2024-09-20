@@ -19,7 +19,12 @@ const MobileMenu = ({ isMenuOpen, navLinks, overlayRef, handleMenuState }) => {
             ))}
             <Divider />
             <li>
-              <a className="py-3 sm:px-4 sm:py-0 hover:opacity-60 cursor-pointer transition-opacity inline-block group font-bold">
+              <a
+                className="py-3 sm:px-4 sm:py-0 hover:opacity-60 cursor-pointer transition-opacity inline-block group"
+                target="_blank"
+                rel="noopener noreferrer"
+                href="/resume.pdf"
+              >
                 Resume{" "}
                 <span className="inline-block transition-transform transform group-hover:translate-x-2">
                   &rarr;

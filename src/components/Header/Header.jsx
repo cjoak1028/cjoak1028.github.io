@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import NavLink from "./NavLink";
 import HamburgerButton from "./HamburgerButton";
 import MobileMenu from "./MobileMenu";
@@ -9,6 +9,35 @@ const Header = ({ navLinks = ["About", "Projects", "Contact"] }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isButtonOpen, setIsButtonOpen] = useState(false);
   const overlayRef = useRef(null);
+
+  // Close menu (if open) when screen is resized
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 640 && isMenuOpen) {
+        setIsMenuOpen(false);
+        setIsButtonOpen(false);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [isMenuOpen]);
+
+  // Prevent scrolling when menu is open
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.classList.add("overflow-hidden");
+    } else {
+      document.body.classList.remove("overflow-hidden");
+    }
+
+    return () => {
+      document.body.classList.remove("overflow-hidden");
+    };
+  }, [isMenuOpen]);
 
   const handleMenuState = () => {
     setIsButtonOpen((prevState) => !prevState);
@@ -45,7 +74,14 @@ const Header = ({ navLinks = ["About", "Projects", "Contact"] }) => {
                 </li>
               );
             })}
-            <a className="ml-4 flex items-center primary-button">Resume</a>
+            <a
+              className="ml-4 flex items-center primary-button"
+              target="_blank"
+              rel="noopener noreferrer"
+              href="/resume.pdf"
+            >
+              Resume
+            </a>
           </ul>
         </nav>
         <HamburgerButton onClick={handleMenuState} isOpen={isButtonOpen} />
