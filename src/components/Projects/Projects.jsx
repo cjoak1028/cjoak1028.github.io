@@ -12,12 +12,15 @@ const imageMap = {
   planets: PlanetsThumbnail,
 };
 
-const Projects = () => {
+const Projects = ({ propRef }) => {
   const path = "/data/projects.json";
   const [data, loading, error] = useFetchData(path);
 
   return (
-    <section className="content gap-10 md:gap-14 items-center max-w-96 md:max-w-2xl">
+    <section
+      className="content gap-10 md:gap-14 items-center max-w-96 md:max-w-2xl scroll-m-[6.25rem] sm:scroll-m-[8.25rem]"
+      ref={propRef}
+    >
       <div className="w-full">
         <h2 className="heading-md mb-2">Projects 🧑🏻‍💻</h2>
         <h3 className="heading-sm leading-snug opacity-60">
