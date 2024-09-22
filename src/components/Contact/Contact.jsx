@@ -1,6 +1,9 @@
-const Contact = () => {
+const Contact = ({ propRef }) => {
   return (
-    <section className="content gap-10 w-full max-w-lg">
+    <section
+      className="content gap-10 w-full max-w-lg scroll-m-[6.25rem] sm:scroll-m-[8.25rem]"
+      ref={propRef}
+    >
       <div>
         <h2 className="heading-md mb-2">Contact 👋</h2>
         <h3 className="heading-sm leading-snug opacity-60">

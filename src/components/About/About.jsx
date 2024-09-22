@@ -6,7 +6,7 @@ import ReactLogo from "../../assets/logos/react-logo.svg";
 import SassLogo from "../../assets/logos/sass-logo.svg";
 import TailwindLogo from "../../assets/logos/tailwind-logo.svg";
 
-const About = () => {
+const About = ({ propRef }) => {
   const logos = {
     HTML: HtmlLogo,
     CSS: CssLogo,
@@ -21,7 +21,10 @@ const About = () => {
   );
 
   return (
-    <section className="content gap-3 sm:gap-5 max-w-96 sm:max-w-[32.5rem]">
+    <section
+      className="content gap-3 sm:gap-5 max-w-96 sm:max-w-[32.5rem] scroll-m-[6.25rem] sm:scroll-m-[8.25rem]"
+      ref={propRef}
+    >
       <h2 className="heading-md">About me ✌️</h2>
       <img src={AboutImage} className="w-full h-auto" alt="About me" />
       <p>

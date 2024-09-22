@@ -12,9 +12,9 @@ const MobileMenu = ({ isMenuOpen, navLinks, overlayRef, handleMenuState }) => {
         <Divider />
         <nav className="bg-white p-8" onClick={(e) => e.stopPropagation()}>
           <ul className="flex flex-col font-medium -mt-3 -mb-3">
-            {navLinks.map((link, index) => (
-              <li key={index}>
-                <NavLink label={link} />
+            {Object.entries(navLinks).map(([linkLabel, linkSectionRef]) => (
+              <li key={linkLabel}>
+                <NavLink label={linkLabel} section={linkSectionRef} />
               </li>
             ))}
             <Divider />
