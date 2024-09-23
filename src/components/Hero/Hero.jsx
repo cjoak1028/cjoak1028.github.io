@@ -12,10 +12,10 @@ const Hero = () => {
         <TypeAnimation
           sequence={[
             "Hello! I'm CJ",
-            2000,
+            1000,
+            "Designer",
+            1000,
             "Frontend Developer",
-            2000,
-            "UI Designer",
             4000,
           ]}
           wrapper="span"
