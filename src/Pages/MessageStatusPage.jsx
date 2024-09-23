@@ -1,14 +1,14 @@
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
-import HeartIcon from "../assets/heart-icon.svg";
-import SadFaceIcon from "../assets/sad-face-icon.svg";
+import AirplaneIcon from "../assets/icons/airplane-icon.svg";
+import SadFaceIcon from "../assets/icons/sad-face-icon.svg";
 
 const MessageStatusPage = () => {
   const { state } = useLocation();
   const isSuccess = state?.isSuccess;
-  const icon = isSuccess ? HeartIcon : SadFaceIcon;
-  const heading = isSuccess ? "Message received." : "Oops!";
-  const subHeading = isSuccess ? "Thank you!" : "Something went wrong.";
+  const icon = isSuccess ? AirplaneIcon : SadFaceIcon;
+  const heading = isSuccess ? "Thank you!" : "Oops!";
+  const subHeading = isSuccess ? "Message received." : "Something went wrong.";
   const message = isSuccess
     ? "I'll be in touch with you shortly."
     : "Please try again later.";
@@ -22,7 +22,7 @@ const MessageStatusPage = () => {
           {subHeading}
         </h2>
       </div>
-      <h3 className="heading-sm">{message}</h3>
+      <h3 className="heading-sm opacity-80">{message}</h3>
       <Link to="/" className="primary-button flex items-center justify-center">
         Back to home
       </Link>

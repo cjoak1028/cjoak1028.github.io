@@ -28,7 +28,13 @@ const Footer = () => {
           );
         })}
       </div>
-      <p className="text-black/40 text-xs">Designed & Built by CJ Kim</p>
+      <div className="text-center">
+        <p className="text-black/40 text-xs mb-2">Designed & built by CJ Kim</p>
+        <p className="text-black/40 text-xs">
+          Built with <span className="font-semibold">React</span> and{" "}
+          <span className="font-semibold">Tailwind CSS</span>
+        </p>
+      </div>
     </div>
   );
 };

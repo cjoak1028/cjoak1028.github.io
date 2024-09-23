@@ -1,5 +1,5 @@
-import GithubIcon from "../../assets/logos/github-logo.svg";
-import ExtLinkIcon from "../../assets/ext-link.svg";
+import GithubLogo from "../../assets/logos/github-logo.svg";
+import LinkIcon from "../../assets/icons/link-icon.svg";
 import TextIconLink from "../Shared/TextIconLink";
 
 const Project = ({
@@ -34,8 +34,8 @@ const Project = ({
           ))}
         </ul>
         <div className="flex flex-row gap-7">
-          <TextIconLink text="Code" icon={GithubIcon} link={repoLink} />
-          <TextIconLink text="Demo" icon={ExtLinkIcon} link={demoLink} />
+          <TextIconLink text="Code" icon={GithubLogo} link={repoLink} />
+          <TextIconLink text="Demo" icon={LinkIcon} link={demoLink} />
         </div>
       </div>
     </div>

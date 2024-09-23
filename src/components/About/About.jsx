@@ -1,4 +1,4 @@
-import AboutImage from "../../assets/about-image.jpg";
+import AboutPhoto from "../../assets/photos/about-photo.jpg";
 import HtmlLogo from "../../assets/logos/html-logo.svg";
 import CssLogo from "../../assets/logos/css-logo.svg";
 import JsLogo from "../../assets/logos/js-logo.svg";
@@ -26,7 +26,7 @@ const About = ({ propRef }) => {
       ref={propRef}
     >
       <h2 className="heading-md">About me ✌️</h2>
-      <img src={AboutImage} className="w-full h-auto" alt="About me" />
+      <img src={AboutPhoto} className="w-full h-auto" alt="About me" />
       <p>
         Hello! I’m CJ, a passionate React front-end developer based in Toronto,
         Canada. I love to design and build pixel-perfect, engaging, and

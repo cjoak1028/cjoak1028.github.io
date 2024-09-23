@@ -4,7 +4,7 @@ import NavLink from "./NavLink";
 import HamburgerButton from "./HamburgerButton";
 import MobileMenu from "./MobileMenu";
 import Banner from "./Banner";
-// import LogoImage from "../../assets/logo-profile.jpg";
+import Logo from "../../assets/logos/logo.svg";
 
 const Header = ({ navLinks }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -76,10 +76,10 @@ const Header = ({ navLinks }) => {
     <div className="sticky top-0 z-10">
       <div className="px-6 md:px-10 h-[3.75rem] sm:h-[5.125rem] flex flex-row justify-between items-center bg-white">
         <div
-          className="flex flex-row gap-2 sm:gap-3 items-center hover:opacity-60 cursor-pointer transition-opacity"
+          className="flex flex-row gap-1 sm:gap-2 items-center hover:opacity-60 cursor-pointer transition-opacity"
           onClick={handleLogoClick}
         >
-          {/* <img src={LogoImage} className="w-5 h-5 sm:w-7 sm:h-7 rounded-full" /> */}
+          <img src={Logo} className="h-5 sm:h-7 rounded-full" />
           <span className="font-semibold tracking-widest sm:text-lg">
             cjkim.dev
           </span>
