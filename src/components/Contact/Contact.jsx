@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import emailjs from "@emailjs/browser";
 import AlertIcon from "../../assets/alert-icon.svg";
 import LoadingAnimation from "../Shared/LoadingAnimation";
@@ -10,7 +10,14 @@ const Contact = ({ propRef }) => {
   const [errors, setErrors] = useState({});
   const [loading, setLoading] = useState(false);
 
-  const validate = () => {
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    if (name === "fromName") setName(value);
+    if (name === "fromEmail") setEmail(value);
+    if (name === "message") setMessage(value);
+  };
+
+  const validate = useCallback(() => {
     let formErrors = {};
     if (!name) formErrors.name = "Name can't be empty";
     if (!email) {
@@ -21,47 +28,50 @@ const Contact = ({ propRef }) => {
     if (!message) formErrors.message = "Message can't be empty";
 
     return formErrors;
-  };
+  }, [name, email, message]);
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    const formErrors = validate();
+  const handleSubmit = useCallback(
+    async (e) => {
+      e.preventDefault();
+      const formErrors = validate();
 
-    if (Object.keys(formErrors).length > 0) {
-      setErrors(formErrors);
-      return;
-    }
+      if (Object.keys(formErrors).length > 0) {
+        setErrors(formErrors);
+        return;
+      }
 
-    setLoading(true);
+      setLoading(true);
 
-    const serviceId = "service_93nepq2";
-    const templateId = "template_5rsyyjk";
-    const publicKey = "CY3CKwRy31vHWPzCD";
+      const serviceId = "service_93nepq2";
+      const templateId = "template_5rsyyjk";
+      const publicKey = "CY3CKwRy31vHWPzCD";
 
-    const templateParams = {
-      from_name: name,
-      from_email: email,
-      message: message,
-    };
+      const templateParams = {
+        from_name: name,
+        from_email: email,
+        message: message,
+      };
 
-    try {
-      const response = await emailjs.send(
-        serviceId,
-        templateId,
-        templateParams,
-        publicKey
-      );
-      console.log("Email sent successfully", response);
-      setName("");
-      setEmail("");
-      setMessage("");
-      setErrors({});
-    } catch (error) {
-      console.error("Error sending email", error);
-    } finally {
-      setLoading(false);
-    }
-  };
+      try {
+        const response = await emailjs.send(
+          serviceId,
+          templateId,
+          templateParams,
+          publicKey
+        );
+        console.log("Email sent successfully", response);
+        setName("");
+        setEmail("");
+        setMessage("");
+        setErrors({});
+      } catch (error) {
+        console.error("Error sending email", error);
+      } finally {
+        setLoading(false);
+      }
+    },
+    [name, email, message, validate]
+  );
 
   const ErrorMessage = ({ message }) => {
     return (
@@ -77,7 +87,7 @@ const Contact = ({ propRef }) => {
       ref={propRef}
     >
       <div>
-        <h2 className="heading-md mb-2">Contact 👋</h2>
+        <h2 className="heading-md mb-2">Say Hello 👋</h2>
         <h3 className="heading-sm leading-snug opacity-60">
           Get in touch with me via email or social media.
         </h3>
@@ -95,7 +105,7 @@ const Contact = ({ propRef }) => {
             className={`w-full p-2 text-sm rounded-md border border-solid ${
               errors.name ? "border-red-500" : "border-black/10"
             }`}
-            onChange={(e) => setName(e.target.value)}
+            onChange={handleInputChange}
           />
           {errors.name && <ErrorMessage message={errors.name} />}
         </div>
@@ -111,7 +121,7 @@ const Contact = ({ propRef }) => {
             className={`w-full p-2 text-sm rounded-md border border-solid ${
               errors.email ? "border-red-500" : "border-black/10"
             }`}
-            onChange={(e) => setEmail(e.target.value)}
+            onChange={handleInputChange}
           />
           {errors.email && <ErrorMessage message={errors.email} />}
         </div>
@@ -127,7 +137,7 @@ const Contact = ({ propRef }) => {
               errors.message ? "border-red-500" : "border-black/10"
             }`}
             rows="5"
-            onChange={(e) => setMessage(e.target.value)}
+            onChange={handleInputChange}
           ></textarea>
           {errors.message && <ErrorMessage message={errors.message} />}
         </div>
