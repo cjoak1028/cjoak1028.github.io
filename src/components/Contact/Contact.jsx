@@ -1,4 +1,5 @@
 import { useState, useCallback } from "react";
+import { useNavigate } from "react-router-dom";
 import emailjs from "@emailjs/browser";
 import AlertIcon from "../../assets/alert-icon.svg";
 import LoadingAnimation from "../Shared/LoadingAnimation";
@@ -9,6 +10,7 @@ const Contact = ({ propRef }) => {
   const [message, setMessage] = useState("");
   const [errors, setErrors] = useState({});
   const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -60,22 +62,24 @@ const Contact = ({ propRef }) => {
           publicKey
         );
         console.log("Email sent successfully", response);
+        navigate("/status", { state: { isSuccess: true } });
         setName("");
         setEmail("");
         setMessage("");
         setErrors({});
       } catch (error) {
         console.error("Error sending email", error);
+        navigate("/status", { state: { isSuccess: false } });
       } finally {
         setLoading(false);
       }
     },
-    [name, email, message, validate]
+    [name, email, message, validate, navigate]
   );
 
   const ErrorMessage = ({ message }) => {
     return (
-      <p className="flex flex-row items-center text-xs text-red-500 mt-1 gap-1">
+      <p className="flex flex-row items-center text-xs text-red-500 mt-1 gap-1 font-medium">
         <img src={AlertIcon} className="h-4 inline-block" /> {message}
       </p>
     );
@@ -87,7 +91,7 @@ const Contact = ({ propRef }) => {
       ref={propRef}
     >
       <div>
-        <h2 className="heading-md mb-2">Say Hello 👋</h2>
+        <h2 className="heading-md mb-2">Say hello! 👋</h2>
         <h3 className="heading-sm leading-snug opacity-60">
           Get in touch with me via email or social media.
         </h3>

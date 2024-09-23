@@ -30,11 +30,11 @@ const About = ({ propRef }) => {
       <p>
         Hello! I’m CJ, a passionate React front-end developer based in Toronto,
         Canada. I love to design and build pixel-perfect, engaging, and
-        accessible web experiences. When I’m not coding, I’m probably either on
-        my home patio holding a cup of joe in one hand and a book in the other
-        or in the gym pumping iron and hitting PR’s. Every now and then, I’d go
-        on a little trip, but that doesn’t stop me from sticking to my daily
-        ritual of solving a LeetCode problem!
+        accessible web experiences. When I’m not designing or coding, I’m on my
+        home patio holding a cup of joe in one hand and a book in the other or
+        in the gym pumping iron and hitting PR’s. Every now and then, I’d go on
+        a little trip, but that doesn’t stop me from sticking to my daily ritual
+        of solving a LeetCode problem!
       </p>
       <div className="flex flex-row items-center justify-center sm:gap-8">
         <h2 className="heading-sm uppercase hidden sm:inline-block opacity-60">
