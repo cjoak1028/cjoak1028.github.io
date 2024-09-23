@@ -1,9 +1,9 @@
-import useFetchData from "../../hooks/useFetchData";
-import EntertainmentThumbnail from "../../assets/thumbnails/entertainment.jpg";
-import DictionaryThumbnail from "../../assets/thumbnails/dictionary.jpg";
-import PhotosnapThumbnail from "../../assets/thumbnails/photosnap.jpg";
-import PlanetsThumbnail from "../../assets/thumbnails/planets.jpg";
-import Project from "./Project";
+import useFetchData from "src/hooks/useFetchData";
+import EntertainmentThumbnail from "src/assets/thumbnails/entertainment.jpg";
+import DictionaryThumbnail from "src/assets/thumbnails/dictionary.jpg";
+import PhotosnapThumbnail from "src/assets/thumbnails/photosnap.jpg";
+import PlanetsThumbnail from "src/assets/thumbnails/planets.jpg";
+import Project from "src/features/Projects/Project";
 
 const imageMap = {
   entertainment: EntertainmentThumbnail,

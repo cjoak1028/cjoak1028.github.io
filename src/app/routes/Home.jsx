@@ -1,10 +1,10 @@
 import { useRef } from "react";
-import Header from "../components/Header/Header";
-import Hero from "../components/Hero/Hero";
-import About from "../components/About/About";
-import Projects from "../components/Projects/Projects";
-import Contact from "../components/Contact/Contact";
-import Footer from "../components/Footer/Footer";
+import Header from "src/features/Header/Header";
+import Hero from "src/features/Hero/Hero";
+import About from "src/features/About/About";
+import Projects from "src/features/Projects/Projects";
+import Contact from "src/features/Contact/Contact";
+import Footer from "src/features/Footer/Footer";
 
 const Home = () => {
   const aboutRef = useRef();

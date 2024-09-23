@@ -1,6 +1,6 @@
-import GithubLogo from "../../assets/logos/github-logo.svg";
-import LinkIcon from "../../assets/icons/link-icon.svg";
-import TextIconLink from "../Shared/TextIconLink";
+import GithubLogo from "src/assets/logos/github-logo.svg";
+import LinkIcon from "src/assets/icons/link-icon.svg";
+import TextIconLink from "src/components/TextIconLink";
 
 const Project = ({
   title,

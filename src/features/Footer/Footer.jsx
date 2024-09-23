@@ -1,7 +1,7 @@
-import LinkedInIcon from "../../assets/logos/linkedin-logo.svg";
-import GithubIcon from "../../assets/logos/github-logo.svg";
-import InstagramIcon from "../../assets/logos/instagram-logo.svg";
-import SocialLink from "../Shared/SocialLink";
+import LinkedInIcon from "src/assets/logos/linkedin-logo.svg";
+import GithubIcon from "src/assets/logos/github-logo.svg";
+import InstagramIcon from "src/assets/logos/instagram-logo.svg";
+import SocialLink from "src/components/SocialLink";
 
 const socialLinks = [
   {

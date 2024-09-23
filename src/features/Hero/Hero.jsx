@@ -1,4 +1,4 @@
-import HeroPhoto from "../../assets/photos/hero-photo.jpg";
+import HeroPhoto from "src/assets/photos/hero-photo.jpg";
 import { TypeAnimation } from "react-type-animation";
 
 const Hero = () => {

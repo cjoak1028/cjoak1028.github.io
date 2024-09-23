@@ -1,10 +1,10 @@
-import AboutPhoto from "../../assets/photos/about-photo.jpg";
-import HtmlLogo from "../../assets/logos/html-logo.svg";
-import CssLogo from "../../assets/logos/css-logo.svg";
-import JsLogo from "../../assets/logos/js-logo.svg";
-import ReactLogo from "../../assets/logos/react-logo.svg";
-import SassLogo from "../../assets/logos/sass-logo.svg";
-import TailwindLogo from "../../assets/logos/tailwind-logo.svg";
+import AboutPhoto from "src/assets/photos/about-photo.jpg";
+import HtmlLogo from "src/assets/logos/html-logo.svg";
+import CssLogo from "src/assets/logos/css-logo.svg";
+import JsLogo from "src/assets/logos/js-logo.svg";
+import ReactLogo from "src/assets/logos/react-logo.svg";
+import SassLogo from "src/assets/logos/sass-logo.svg";
+import TailwindLogo from "src/assets/logos/tailwind-logo.svg";
 
 const About = ({ propRef }) => {
   const logos = {
