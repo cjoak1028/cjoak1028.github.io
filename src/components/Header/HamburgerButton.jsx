@@ -11,8 +11,10 @@ const HamburgerButton = ({ onClick, isOpen }) => {
         xmlns="http://www.w3.org/2000/svg"
       >
         <rect
-          className={`origin-center -translate-y-[5px] translate-x-[7px] transition-all duration-300 ease-[cubic-bezier(.5,.85,.25,1.1)] ${
-            isOpen && "translate-x-0 translate-y-0 rotate-[315deg]"
+          className={`origin-center transition-all duration-300 ease-[cubic-bezier(.5,.85,.25,1.1)] ${
+            isOpen
+              ? "translate-x-0 translate-y-0 rotate-[315deg]"
+              : "-translate-y-[5px] translate-x-[7px]"
           }`}
           y="7"
           width="9"
@@ -29,8 +31,8 @@ const HamburgerButton = ({ onClick, isOpen }) => {
           rx="1"
         ></rect>
         <rect
-          className={`origin-center translate-y-[5px] transition-all duration-300 ease-[cubic-bezier(.5,.85,.25,1.1)] ${
-            isOpen && "translate-y-0 rotate-[135deg]"
+          className={`origin-center transition-all duration-300 ease-[cubic-bezier(.5,.85,.25,1.1)] ${
+            isOpen ? "translate-y-0 rotate-[135deg]" : "translate-y-[5px]"
           }`}
           y="7"
           width="9"

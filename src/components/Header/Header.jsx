@@ -39,7 +39,7 @@ const Header = ({ navLinks }) => {
     };
   }, [isMenuOpen]);
 
-  const handleMenuState = () => {
+  const handleMenuClick = () => {
     setIsButtonOpen((prevState) => !prevState);
     if (isMenuOpen) {
       overlayRef.current.classList.add("opacity-0"); // Start closing animation
@@ -95,14 +95,14 @@ const Header = ({ navLinks }) => {
             </a>
           </ul>
         </nav>
-        <HamburgerButton onClick={handleMenuState} isOpen={isButtonOpen} />
+        <HamburgerButton onClick={handleMenuClick} isOpen={isButtonOpen} />
       </div>
       <Banner />
       <MobileMenu
         isMenuOpen={isMenuOpen}
         navLinks={navLinks}
         overlayRef={overlayRef}
-        handleMenuState={handleMenuState}
+        handleMenuState={handleMenuClick}
       />
     </div>
   );
