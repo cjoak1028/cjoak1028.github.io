@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from "react";
+import { ToggleMenuContext } from "./ToggleMenuContext";
 import NavLink from "./NavLink";
 import HamburgerButton from "./HamburgerButton";
 import MobileMenu from "./MobileMenu";
@@ -39,7 +40,7 @@ const Header = ({ navLinks }) => {
     };
   }, [isMenuOpen]);
 
-  const handleMenuClick = () => {
+  const toggleMenu = () => {
     setIsButtonOpen((prevState) => !prevState);
     if (isMenuOpen) {
       overlayRef.current.classList.add("opacity-0"); // Start closing animation
@@ -64,12 +65,19 @@ const Header = ({ navLinks }) => {
     });
   };
 
+  const handleLogoClick = () => {
+    scrollToTop();
+    if (isMenuOpen) {
+      toggleMenu();
+    }
+  };
+
   return (
     <div className="sticky top-0 z-10">
       <div className="px-6 md:px-10 h-[3.75rem] sm:h-[5.125rem] flex flex-row justify-between items-center bg-white">
         <div
           className="flex flex-row gap-2 sm:gap-3 items-center hover:opacity-60 cursor-pointer transition-opacity"
-          onClick={scrollToTop}
+          onClick={handleLogoClick}
         >
           {/* <img src={LogoImage} className="w-5 h-5 sm:w-7 sm:h-7 rounded-full" /> */}
           <span className="font-semibold tracking-widest sm:text-lg">
@@ -95,15 +103,17 @@ const Header = ({ navLinks }) => {
             </a>
           </ul>
         </nav>
-        <HamburgerButton onClick={handleMenuClick} isOpen={isButtonOpen} />
+        <HamburgerButton onClick={toggleMenu} isOpen={isButtonOpen} />
       </div>
       <Banner />
-      <MobileMenu
-        isMenuOpen={isMenuOpen}
-        navLinks={navLinks}
-        overlayRef={overlayRef}
-        handleMenuState={handleMenuClick}
-      />
+
+      <ToggleMenuContext.Provider value={toggleMenu}>
+        <MobileMenu
+          isMenuOpen={isMenuOpen}
+          navLinks={navLinks}
+          overlayRef={overlayRef}
+        />
+      </ToggleMenuContext.Provider>
     </div>
   );
 };

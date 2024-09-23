@@ -1,13 +1,17 @@
+import { useContext } from "react";
+import { ToggleMenuContext } from "./ToggleMenuContext";
 import NavLink from "./NavLink";
 import Divider from "../Shared/Divider";
 
-const MobileMenu = ({ isMenuOpen, navLinks, overlayRef, handleMenuState }) => {
+const MobileMenu = ({ isMenuOpen, navLinks, overlayRef }) => {
+  const toggleMenu = useContext(ToggleMenuContext);
+
   return (
     isMenuOpen && (
       <div
         ref={overlayRef}
         className="h-full bg-black/50 z-10 fixed top-[3.75rem] left-0 w-full sm:hidden opacity-0 transition-opacity duration-300"
-        onClick={handleMenuState}
+        onClick={toggleMenu}
       >
         <Divider />
         <nav className="bg-white p-8" onClick={(e) => e.stopPropagation()}>
