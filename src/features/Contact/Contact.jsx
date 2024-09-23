@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import emailjs from "@emailjs/browser";
 import AlertIcon from "src/assets/icons/alert-icon.svg";
 import LoadingAnimation from "src/components/LoadingAnimation";
+import SectionLayout from "src/components/SectionLayout";
 
 const Contact = ({ propRef }) => {
   const [name, setName] = useState("");
@@ -86,74 +87,75 @@ const Contact = ({ propRef }) => {
   };
 
   return (
-    <section
-      className="content gap-10 w-full max-w-lg scroll-m-[6.25rem] sm:scroll-m-[8.25rem]"
-      ref={propRef}
-    >
-      <div>
-        <h2 className="heading-md mb-2">Say hello! 👋</h2>
-        <h3 className="heading-sm leading-snug opacity-60">
-          Get in touch with me via email or social media.
-        </h3>
-      </div>
-      <form noValidate className="flex flex-col gap-4" onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="fromName" className="text-xs font-medium">
-            Name
-          </label>
-          <input
-            name="fromName"
-            type="text"
-            value={name}
-            autoComplete="off"
-            className={`w-full p-2 text-sm rounded-md border border-solid ${
-              errors.name ? "border-red-500" : "border-black/10"
-            }`}
-            onChange={handleInputChange}
-          />
-          {errors.name && <ErrorMessage message={errors.name} />}
-        </div>
-        <div>
-          <label htmlFor="fromEmail" className="text-xs font-medium">
-            Email
-          </label>
-          <input
-            name="fromEmail"
-            type="email"
-            value={email}
-            autoComplete="off"
-            className={`w-full p-2 text-sm rounded-md border border-solid ${
-              errors.email ? "border-red-500" : "border-black/10"
-            }`}
-            onChange={handleInputChange}
-          />
-          {errors.email && <ErrorMessage message={errors.email} />}
-        </div>
-        <div>
-          <label htmlFor="message" className="text-xs font-medium">
-            Message
-          </label>
-          <textarea
-            name="message"
-            value={message}
-            autoComplete="off"
-            className={`block w-full p-2 text-sm rounded-md border border-solid ${
-              errors.message ? "border-red-500" : "border-black/10"
-            }`}
-            rows="5"
-            onChange={handleInputChange}
-          ></textarea>
-          {errors.message && <ErrorMessage message={errors.message} />}
-        </div>
-        <button
-          type="submit"
-          className="primary-button flex items-center justify-center sm:w-40 sm:self-end"
-          disabled={loading}
+    <div className="w-full max-w-lg">
+      <SectionLayout
+        title="Say hello 👋"
+        subTitle="Get in touch with me via email or social media."
+        propRef={propRef}
+      >
+        <form
+          noValidate
+          className="content gap-4 mt-10"
+          onSubmit={handleSubmit}
         >
-          {loading ? <LoadingAnimation /> : "Send message"}
-        </button>
-      </form>
-    </section>
+          <div className="w-full">
+            <label htmlFor="fromName" className="text-xs font-medium">
+              Name
+            </label>
+            <input
+              name="fromName"
+              type="text"
+              value={name}
+              autoComplete="off"
+              className={`w-full p-2 text-sm rounded-md border border-solid ${
+                errors.name ? "border-red-500" : "border-black/10"
+              }`}
+              onChange={handleInputChange}
+            />
+            {errors.name && <ErrorMessage message={errors.name} />}
+          </div>
+          <div className="w-full">
+            <label htmlFor="fromEmail" className="text-xs font-medium">
+              Email
+            </label>
+            <input
+              name="fromEmail"
+              type="email"
+              value={email}
+              autoComplete="off"
+              className={`w-full p-2 text-sm rounded-md border border-solid ${
+                errors.email ? "border-red-500" : "border-black/10"
+              }`}
+              onChange={handleInputChange}
+            />
+            {errors.email && <ErrorMessage message={errors.email} />}
+          </div>
+          <div className="w-full">
+            <label htmlFor="message" className="text-xs font-medium">
+              Message
+            </label>
+            <textarea
+              name="message"
+              value={message}
+              autoComplete="off"
+              className={`block w-full p-2 text-sm rounded-md border border-solid ${
+                errors.message ? "border-red-500" : "border-black/10"
+              }`}
+              rows="5"
+              onChange={handleInputChange}
+            ></textarea>
+            {errors.message && <ErrorMessage message={errors.message} />}
+          </div>
+          <button
+            type="submit"
+            className="primary-button flex items-center justify-center w-full sm:w-40 sm:self-end"
+            disabled={loading}
+          >
+            {loading ? <LoadingAnimation /> : "Send message"}
+          </button>
+        </form>
+      </SectionLayout>
+    </div>
   );
 };
 
