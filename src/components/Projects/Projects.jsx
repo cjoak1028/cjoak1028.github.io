@@ -18,7 +18,7 @@ const Projects = ({ propRef }) => {
 
   return (
     <section
-      className="content gap-10 md:gap-14 items-center max-w-96 md:max-w-2xl scroll-m-[6.25rem] sm:scroll-m-[8.25rem]"
+      className="content gap-10 md:gap-14 items-center max-w-[32.5rem]  md:max-w-2xl scroll-m-[6.25rem] sm:scroll-m-[8.25rem]"
       ref={propRef}
     >
       <div className="w-full">

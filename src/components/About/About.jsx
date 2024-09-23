@@ -22,7 +22,7 @@ const About = ({ propRef }) => {
 
   return (
     <section
-      className="content gap-3 sm:gap-5 max-w-96 sm:max-w-[32.5rem] scroll-m-[6.25rem] sm:scroll-m-[8.25rem]"
+      className="content gap-3 sm:gap-5 max-w-[32.5rem] scroll-m-[6.25rem] sm:scroll-m-[8.25rem]"
       ref={propRef}
     >
       <h2 className="heading-md">About me ✌️</h2>

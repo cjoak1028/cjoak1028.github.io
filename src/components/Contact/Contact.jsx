@@ -147,7 +147,7 @@ const Contact = ({ propRef }) => {
         </div>
         <button
           type="submit"
-          className="primary-button self-end flex items-center justify-center w-40"
+          className="primary-button flex items-center justify-center sm:w-40 sm:self-end"
           disabled={loading}
         >
           {loading ? <LoadingAnimation /> : "Send message"}
