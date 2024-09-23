@@ -1,7 +1,7 @@
 import { useState, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import emailjs from "@emailjs/browser";
-import AlertIcon from "../../assets/alert-icon.svg";
+import AlertIcon from "../../assets/icons/alert-icon.svg";
 import LoadingAnimation from "../Shared/LoadingAnimation";
 
 const Contact = ({ propRef }) => {

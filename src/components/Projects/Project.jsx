@@ -1,5 +1,5 @@
 import GithubIcon from "../../assets/logos/github-logo.svg";
-import ExtLinkIcon from "../../assets/ext-link.svg";
+import ExtLinkIcon from "../../assets/icons/ext-link.svg";
 import TextIconLink from "../Shared/TextIconLink";
 
 const Project = ({

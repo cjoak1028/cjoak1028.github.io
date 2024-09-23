@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
-import HeartIcon from "../assets/heart-icon.svg";
-import SadFaceIcon from "../assets/sad-face-icon.svg";
+import HeartIcon from "../assets/icons/heart-icon.svg";
+import SadFaceIcon from "../assets/icons/sad-face-icon.svg";
 
 const MessageStatusPage = () => {
   const { state } = useLocation();
