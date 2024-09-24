@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { ToggleMenuContext } from "./ToggleMenuContext";
+import { ToggleMenuContext } from "src/features/Header/ToggleMenuContext";
 
 const NavLink = ({ label, section }) => {
   const toggleMenu = useContext(ToggleMenuContext);

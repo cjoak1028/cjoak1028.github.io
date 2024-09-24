@@ -1,10 +1,10 @@
 import { useState, useRef, useEffect } from "react";
 import { ToggleMenuContext } from "./ToggleMenuContext";
-import NavLink from "./NavLink";
-import HamburgerButton from "./HamburgerButton";
-import MobileMenu from "./MobileMenu";
-import Banner from "./Banner";
-import Logo from "../../assets/logos/logo.svg";
+import NavLink from "src/features/Header/NavLink";
+import HamburgerButton from "src/features/Header/HamburgerButton";
+import MobileMenu from "src/features/Header/MobileMenu";
+import Banner from "src/features/Header/Banner";
+// import Logo from "src/assets/logos/logo.svg";
 
 const Header = ({ navLinks }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -79,8 +79,8 @@ const Header = ({ navLinks }) => {
           className="flex flex-row gap-1 sm:gap-2 items-center hover:opacity-60 cursor-pointer transition-opacity"
           onClick={handleLogoClick}
         >
-          <img src={Logo} className="h-5 sm:h-7 rounded-full" />
-          <span className="font-semibold tracking-widest sm:text-lg">
+          {/* <img src={Logo} className="h-5 sm:h-7 rounded-full" /> */}
+          <span className="font-extrabold tracking-widest sm:text-lg">
             cjkim.dev
           </span>
         </div>

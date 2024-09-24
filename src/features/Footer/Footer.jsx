@@ -1,7 +1,7 @@
-import LinkedInIcon from "../../assets/logos/linkedin-logo.svg";
-import GithubIcon from "../../assets/logos/github-logo.svg";
-import InstagramIcon from "../../assets/logos/instagram-logo.svg";
-import SocialLink from "../Shared/SocialLink";
+import LinkedInIcon from "src/assets/logos/linkedin-logo.svg";
+import GithubIcon from "src/assets/logos/github-logo.svg";
+import InstagramIcon from "src/assets/logos/instagram-logo.svg";
+import SocialLink from "src/components/SocialLink";
 
 const socialLinks = [
   {
@@ -19,7 +19,7 @@ const socialLinks = [
 
 const Footer = () => {
   return (
-    <div className="h-32 md:h-48 flex flex-col gap-5 items-center justify-center">
+    <div className="h-36 md:h-48 flex flex-col gap-5 items-center justify-center">
       <div className="flex flex-row gap-5 md:gap-7">
         {socialLinks.map((socialLink) => {
           const { social, link, icon } = socialLink;

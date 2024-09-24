@@ -1,4 +1,4 @@
-import HeroPhoto from "../../assets/photos/hero-photo.jpg";
+import HeroPhoto from "src/assets/photos/hero-photo.jpg";
 import { TypeAnimation } from "react-type-animation";
 
 const Hero = () => {
@@ -10,17 +10,9 @@ const Hero = () => {
           className="w-[3.125rem] h-[3.125rem] sm:w-[4.75rem] sm:h-[4.75rem] rounded-full mb-6 sm:mb-10 md:mb-16"
         />
         <TypeAnimation
-          sequence={[
-            "Hello! I'm CJ",
-            1000,
-            "UI/UX Designer",
-            1000,
-            "Frontend Developer",
-            4000,
-          ]}
+          sequence={[2000, "Hey! I'm CJ"]}
           wrapper="span"
           cursor={true}
-          repeat={Infinity}
           className="heading-lg whitespace-nowrap"
         />
       </div>

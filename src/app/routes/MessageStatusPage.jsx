@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
-import AirplaneIcon from "../assets/icons/airplane-icon.svg";
-import SadFaceIcon from "../assets/icons/sad-face-icon.svg";
+import AirplaneIcon from "src/assets/icons/airplane-icon.svg";
+import SadFaceIcon from "src/assets/icons/sad-face-icon.svg";
 
 const MessageStatusPage = () => {
   const { state } = useLocation();

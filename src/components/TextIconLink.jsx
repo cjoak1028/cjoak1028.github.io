@@ -1,5 +1,4 @@
 const TextIconLink = ({ text, icon, link }) => {
-  console.log(link);
   return (
     <a
       className={`flex flex-row items-center gap-2 hover:opacity-60 cursor-pointer font-normal transition-opacity ${

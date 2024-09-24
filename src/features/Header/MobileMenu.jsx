@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { ToggleMenuContext } from "./ToggleMenuContext";
-import NavLink from "./NavLink";
-import Divider from "../Shared/Divider";
+import NavLink from "src/features/Header/NavLink";
+import Divider from "src/components/Divider";
 
 const MobileMenu = ({ isMenuOpen, navLinks, overlayRef }) => {
   const toggleMenu = useContext(ToggleMenuContext);
