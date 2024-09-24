@@ -5,11 +5,9 @@ const SectionLayout = ({ title, subTitle = "", propRef, children }) => {
       ref={propRef}
     >
       <div className={`w-full`}>
-        <h2 className="heading-md">{title}</h2>
+        <h2 className="heading-md uppercase">{title}</h2>
         {subTitle && (
-          <h3 className="heading-sm leading-snug opacity-60 mt-2">
-            {subTitle}
-          </h3>
+          <h3 className="heading-sm leading-snug mt-2">{subTitle}</h3>
         )}
       </div>
       {children}
