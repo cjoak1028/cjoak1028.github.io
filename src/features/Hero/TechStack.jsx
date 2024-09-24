@@ -20,12 +20,12 @@ const TechStack = () => {
   );
 
   return (
-    <div className="flex flex-row items-center justify-center sm:gap-8">
-      <h2 className="heading-sm uppercase hidden sm:inline-block opacity-60">
+    <div className="flex flex-row items-center justify-center sm:gap-4">
+      <h2 className="heading-sm uppercase hidden md:inline-block opacity-60 whitespace-nowrap">
         Tech Stack
       </h2>
-      <span className="heading-sm hidden sm:block opacity-60">|</span>
-      <ul className="flex flex-row gap-6 w-full sm:gap-8">
+      <span className="heading-sm hidden md:block opacity-60">|</span>
+      <ul className="flex flex-row w-full justify-between">
         {Object.entries(logos).map(([key, value]) => (
           <li key={key}>
             <TechLogo path={value} tech={key} />
