@@ -1,7 +1,6 @@
 import { useState, useCallback, useMemo } from "react";
 import { useNavigate } from "react-router-dom";
 import LoadingAnimation from "src/components/LoadingAnimation";
-import SectionLayout from "src/components/SectionLayout";
 import InputField from "src/features/Contact/InputField";
 import ErrorMessage from "src/features/Contact/ErrorMessage";
 import { sendEmail } from "src/features/Contact/api/send-email";
@@ -53,7 +52,7 @@ const Contact = ({ propRef }) => {
 
   return (
     <section
-      className="py-8 sm:py-24 scroll-m-[6.25rem] sm:scroll-m-[8.25rem] px-6 bg-slate-50 flex justify-center items-center"
+      className="py-12 sm:py-24 scroll-m-[6.25rem] sm:scroll-m-[8.25rem] px-6 bg-slate-50 flex justify-center items-center"
       ref={propRef}
     >
       <div className="w-full max-w-md">

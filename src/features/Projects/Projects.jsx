@@ -3,7 +3,6 @@ import EntertainmentThumbnail from "src/assets/thumbnails/entertainment.jpg";
 import DictionaryThumbnail from "src/assets/thumbnails/dictionary.jpg";
 import PhotosnapThumbnail from "src/assets/thumbnails/photosnap.jpg";
 import PlanetsThumbnail from "src/assets/thumbnails/planets.jpg";
-import SectionLayout from "src/components/SectionLayout";
 import Project from "src/features/Projects/Project";
 
 const imageMap = {
@@ -18,12 +17,15 @@ const Projects = ({ propRef }) => {
   const [data, loading, error] = useFetchData(path);
 
   return (
-    <div className="max-w-[32.5rem] md:max-w-2xl">
-      <SectionLayout
-        title="Projects 🧑🏻‍💻"
-        subTitle="Here are some projects that I put my heart and soul into!"
-        propRef={propRef}
-      >
+    <section
+      className="py-12 sm:py-24 scroll-m-[6.25rem] sm:scroll-m-[8.25rem] px-6 flex justify-center items-center"
+      ref={propRef}
+    >
+      <div className="w-full max-w-[32.5rem] md:max-w-2xl">
+        <h2 className="heading-md uppercase">My Projects 🧑🏻‍💻</h2>
+        <h3 className="heading-sm leading-snug mt-2">
+          Here are some projects that I put my heart and soul into!
+        </h3>
         <div className="content gap-10 md:gap-14 mt-10 md:mt-14 md:max-w-2xl">
           {loading && <p>Loading...</p>}
           {error && <p>Something went wrong 😢</p>}
@@ -51,8 +53,8 @@ const Projects = ({ propRef }) => {
               );
             })}
         </div>
-      </SectionLayout>
-    </div>
+      </div>
+    </section>
   );
 };
 
