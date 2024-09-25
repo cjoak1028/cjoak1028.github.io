@@ -28,7 +28,7 @@ const About = ({ propRef }) => {
               rel="noopener noreferrer"
               href="/resume.pdf"
             >
-              View Resume{" "}
+              View resume{" "}
               <span className="inline-block transition-transform transform group-hover:translate-x-2">
                 &rarr;
               </span>

@@ -52,6 +52,17 @@ const Projects = ({ propRef }) => {
                 />
               );
             })}
+          <a
+            className="self-end font-medium hover:opacity-60 transition-opacity cursor-pointer group mt-3 sm:mt-5"
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://github.com/cjoak1028"
+          >
+            View more projects{" "}
+            <span className="inline-block transition-transform transform group-hover:translate-x-2">
+              &rarr;
+            </span>
+          </a>
         </div>
       </div>
     </section>
