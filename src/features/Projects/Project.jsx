@@ -20,7 +20,7 @@ const Project = ({
       <div className="flex flex-col gap-3 md:w-3/5">
         <h4 className="text-base font-medium self-start md:hidden">{title}</h4>
         <img
-          className="w-full h-auto shadow-md"
+          className="w-full h-auto shadow-md rounded-xl"
           src={thumbnail}
           alt={`${title} thumbnail`}
         />

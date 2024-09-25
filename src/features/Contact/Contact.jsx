@@ -1,11 +1,11 @@
 import { useState, useCallback, useMemo } from "react";
 import { useNavigate } from "react-router-dom";
 import LoadingAnimation from "src/components/LoadingAnimation";
-import SectionLayout from "src/components/SectionLayout";
 import InputField from "src/features/Contact/InputField";
 import ErrorMessage from "src/features/Contact/ErrorMessage";
 import { sendEmail } from "src/features/Contact/api/send-email";
 import { validateContactForm } from "src/features/Contact/utils/validate-contact-form";
+import ScrollToSection from "src/components/ScrollToSection";
 
 const Contact = ({ propRef }) => {
   const [formData, setFormData] = useState({
@@ -52,15 +52,15 @@ const Contact = ({ propRef }) => {
   );
 
   return (
-    <div className="w-full max-w-lg">
-      <SectionLayout
-        title="Say hello 👋"
-        subTitle="Get in touch with me via email or social media."
-        propRef={propRef}
-      >
+    <ScrollToSection propRef={propRef}>
+      <div className="w-full max-w-md">
+        <h2 className="heading-md uppercase text-center">Say Hello 👋</h2>
+        <h3 className="heading-sm leading-snug mt-2 text-center opacity-60">
+          Get in touch with me via email or social media.
+        </h3>
         <form
           noValidate
-          className="content gap-4 mt-10"
+          className="flex flex-col mt-10"
           onSubmit={handleSubmit}
         >
           <InputField
@@ -86,7 +86,7 @@ const Contact = ({ propRef }) => {
               name="message"
               value={formData.message}
               autoComplete="off"
-              className={`block w-full p-2 text-sm rounded-md border border-solid ${
+              className={`block w-full p-2 text-sm rounded-md border border-solid bg-transparent ${
                 errors.message ? "border-red-500" : "border-black/10"
               }`}
               rows="5"
@@ -96,14 +96,14 @@ const Contact = ({ propRef }) => {
           </div>
           <button
             type="submit"
-            className="primary-button flex items-center justify-center w-full sm:w-40 sm:self-end"
+            className="primary-button flex items-center justify-center w-full sm:w-40 mt-10 self-end"
             disabled={loading}
           >
             {loading ? <LoadingAnimation /> : "Send message"}
           </button>
         </form>
-      </SectionLayout>
-    </div>
+      </div>
+    </ScrollToSection>
   );
 };
 

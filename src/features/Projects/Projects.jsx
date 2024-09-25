@@ -3,8 +3,8 @@ import EntertainmentThumbnail from "src/assets/thumbnails/entertainment.jpg";
 import DictionaryThumbnail from "src/assets/thumbnails/dictionary.jpg";
 import PhotosnapThumbnail from "src/assets/thumbnails/photosnap.jpg";
 import PlanetsThumbnail from "src/assets/thumbnails/planets.jpg";
-import SectionLayout from "src/components/SectionLayout";
 import Project from "src/features/Projects/Project";
+import ScrollToSection from "src/components/ScrollToSection";
 
 const imageMap = {
   entertainment: EntertainmentThumbnail,
@@ -18,13 +18,13 @@ const Projects = ({ propRef }) => {
   const [data, loading, error] = useFetchData(path);
 
   return (
-    <div className="max-w-[32.5rem] md:max-w-2xl">
-      <SectionLayout
-        title="Projects 🧑🏻‍💻"
-        subTitle="Here are some projects that I put my heart and soul into!"
-        propRef={propRef}
-      >
-        <div className="content gap-10 md:gap-14 mt-10 md:mt-14 md:max-w-2xl">
+    <ScrollToSection propRef={propRef}>
+      <div className="w-full max-w-[32.5rem] md:max-w-2xl">
+        <h2 className="heading-md uppercase">My Projects 🧑🏻‍💻</h2>
+        <h3 className="text-base font-medium leading-snug mt-2 opacity-60">
+          Here are some projects that I put my heart and soul into!
+        </h3>
+        <div className="flex flex-col gap-10 md:gap-14 mt-10 md:mt-14 md:max-w-2xl">
           {loading && <p>Loading...</p>}
           {error && <p>Something went wrong 😢</p>}
           {data &&
@@ -50,9 +50,20 @@ const Projects = ({ propRef }) => {
                 />
               );
             })}
+          <a
+            className="self-end font-medium hover:opacity-60 transition-opacity cursor-pointer group mt-3 sm:mt-5"
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://github.com/cjoak1028"
+          >
+            View more projects{" "}
+            <span className="inline-block transition-transform transform group-hover:translate-x-2">
+              &rarr;
+            </span>
+          </a>
         </div>
-      </SectionLayout>
-    </div>
+      </div>
+    </ScrollToSection>
   );
 };
 

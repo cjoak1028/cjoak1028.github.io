@@ -5,11 +5,12 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {
-      fontFamily: {
-        custom: ['CustomFont', 'sans-serif'], // Use 'CustomFont' as the font-family name used in @font-face
-      },
-    },
+    colors: {
+      black: '#282b2d',
+      white: '#ffffff',
+      gray: '#f8fafc',
+      transparent: 'transparent',
+    }
   },
   plugins: [],
 }

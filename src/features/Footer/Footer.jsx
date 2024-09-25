@@ -1,5 +1,5 @@
 import LinkedInIcon from "src/assets/logos/linkedin-logo.svg";
-import GithubIcon from "src/assets/logos/github-logo.svg";
+import GithubIcon from "src/assets/logos/github-white-logo.svg";
 import InstagramIcon from "src/assets/logos/instagram-logo.svg";
 import SocialLink from "src/components/SocialLink";
 
@@ -19,7 +19,7 @@ const socialLinks = [
 
 const Footer = () => {
   return (
-    <div className="h-36 md:h-48 flex flex-col gap-5 items-center justify-center">
+    <div className="flex flex-col items-center gap-5 sm:flex-row justify-center sm:justify-between bg-black px-6 md:px-10 py-8 sm:py-6">
       <div className="flex flex-row gap-5 md:gap-7">
         {socialLinks.map((socialLink) => {
           const { social, link, icon } = socialLink;
@@ -28,9 +28,9 @@ const Footer = () => {
           );
         })}
       </div>
-      <div className="text-center">
-        <p className="text-black/40 text-xs mb-2">Designed & built by CJ Kim</p>
-        <p className="text-black/40 text-xs">
+      <div className="text-center text-white opacity-60 sm:text-start">
+        <p className=" text-xs mb-2">Designed & built by CJ Kim</p>
+        <p className=" text-xs">
           Built with <span className="font-semibold">React</span> and{" "}
           <span className="font-semibold">Tailwind CSS</span>
         </p>
