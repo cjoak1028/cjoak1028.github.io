@@ -60,7 +60,11 @@ const Contact = ({ propRef }) => {
         <h3 className="heading-sm leading-snug mt-2 text-center">
           Get in touch with me via email or social media.
         </h3>
-        <form noValidate className="content mt-10" onSubmit={handleSubmit}>
+        <form
+          noValidate
+          className="flex flex-col mt-10"
+          onSubmit={handleSubmit}
+        >
           <InputField
             name="name"
             label="Name"
@@ -94,7 +98,7 @@ const Contact = ({ propRef }) => {
           </div>
           <button
             type="submit"
-            className="primary-button flex items-center justify-center w-full sm:w-40 mt-10"
+            className="primary-button flex items-center justify-center w-full sm:w-40 mt-10 self-end"
             disabled={loading}
           >
             {loading ? <LoadingAnimation /> : "Send message"}

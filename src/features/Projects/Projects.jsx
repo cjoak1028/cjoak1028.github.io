@@ -26,7 +26,7 @@ const Projects = ({ propRef }) => {
         <h3 className="heading-sm leading-snug mt-2">
           Here are some projects that I put my heart and soul into!
         </h3>
-        <div className="content gap-10 md:gap-14 mt-10 md:mt-14 md:max-w-2xl">
+        <div className="flex flex-col gap-10 md:gap-14 mt-10 md:mt-14 md:max-w-2xl">
           {loading && <p>Loading...</p>}
           {error && <p>Something went wrong 😢</p>}
           {data &&

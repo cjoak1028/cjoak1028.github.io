@@ -1,5 +1,5 @@
-import AboutPhoto from "src/assets/photos/about-photo.jpg";
-import SectionLayout from "src/components/SectionLayout";
+import AboutMobile from "src/assets/photos/about-mobile.jpg";
+import AboutDesktop from "src/assets/photos/about-desktop.jpg";
 
 const About = ({ propRef }) => {
   return (
@@ -8,9 +8,22 @@ const About = ({ propRef }) => {
       ref={propRef}
     >
       <div className="w-full max-w-[32.5rem] md:max-w-2xl">
-        <SectionLayout title="About me ✌️" propRef={propRef}>
-          <div className="content gap-3 sm:gap-5 mt-3 sm:mt-5">
-            <img src={AboutPhoto} className="w-full h-auto" alt="About me" />
+        <div className="flex flex-col gap-3 sm:gap-5 md:flex-row md:gap-12 md:justify-between">
+          <h2 className="heading-md uppercase md:hidden">About me ✌️</h2>
+          <img
+            src={AboutMobile}
+            className="w-full h-auto md:hidden rounded-xl"
+            alt="Photo of CJ"
+          />
+          <img
+            src={AboutDesktop}
+            className="w-1/3 h-1/3 hidden md:block rounded-xl"
+            alt="Photo of CJ"
+          />
+          <div className="flex flex-col gap-3 sm:gap-5 md:gap-3 md:justify-between md:w-2/3">
+            <h2 className="heading-md uppercase hidden md:block">
+              About me ✌️
+            </h2>
             <p>
               Hello! I’m CJ, a passionate React front-end developer based in
               Toronto, Canada. I love to design and build pixel-perfect,
@@ -21,7 +34,6 @@ const About = ({ propRef }) => {
               doesn’t stop me from sticking to my daily ritual of solving a
               LeetCode problem!
             </p>
-
             <a
               className="self-end font-medium hover:opacity-60 transition-opacity cursor-pointer group"
               target="_blank"
@@ -34,7 +46,7 @@ const About = ({ propRef }) => {
               </span>
             </a>
           </div>
-        </SectionLayout>
+        </div>
       </div>
     </section>
   );
