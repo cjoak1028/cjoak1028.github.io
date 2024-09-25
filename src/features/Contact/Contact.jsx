@@ -5,6 +5,7 @@ import InputField from "src/features/Contact/InputField";
 import ErrorMessage from "src/features/Contact/ErrorMessage";
 import { sendEmail } from "src/features/Contact/api/send-email";
 import { validateContactForm } from "src/features/Contact/utils/validate-contact-form";
+import ScrollToSection from "src/components/ScrollToSection";
 
 const Contact = ({ propRef }) => {
   const [formData, setFormData] = useState({
@@ -51,10 +52,7 @@ const Contact = ({ propRef }) => {
   );
 
   return (
-    <section
-      className="py-12 sm:py-24 scroll-m-[6.25rem] sm:scroll-m-[8.25rem] px-6 bg-gray flex justify-center items-center"
-      ref={propRef}
-    >
+    <ScrollToSection propRef={propRef}>
       <div className="w-full max-w-md">
         <h2 className="heading-md uppercase text-center">Say Hello 👋</h2>
         <h3 className="heading-sm leading-snug mt-2 text-center opacity-60">
@@ -105,7 +103,7 @@ const Contact = ({ propRef }) => {
           </button>
         </form>
       </div>
-    </section>
+    </ScrollToSection>
   );
 };
 

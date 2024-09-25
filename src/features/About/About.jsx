@@ -1,12 +1,10 @@
 import AboutMobile from "src/assets/photos/about-mobile.jpg";
 import AboutDesktop from "src/assets/photos/about-desktop.jpg";
+import ScrollToSection from "src/components/ScrollToSection";
 
 const About = ({ propRef }) => {
   return (
-    <section
-      className="py-12 sm:py-24 scroll-m-[6.25rem] sm:scroll-m-[8.25rem] px-6 flex justify-center items-center"
-      ref={propRef}
-    >
+    <ScrollToSection propRef={propRef}>
       <div className="w-full max-w-[32.5rem] md:max-w-2xl">
         <div className="flex flex-col gap-3 sm:gap-5 md:flex-row md:gap-12 md:justify-between">
           <h2 className="heading-md uppercase md:hidden">About me ✌️</h2>
@@ -48,7 +46,7 @@ const About = ({ propRef }) => {
           </div>
         </div>
       </div>
-    </section>
+    </ScrollToSection>
   );
 };
 
