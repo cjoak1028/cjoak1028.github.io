@@ -21,7 +21,7 @@ const Home = () => {
         }}
       />
       <Hero />
-      <main className="px-6 flex flex-col items-center">
+      <main>
         <About propRef={aboutRef} />
         <Projects propRef={projectsRef} />
         <Contact propRef={contactRef} />

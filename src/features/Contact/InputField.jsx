@@ -2,7 +2,7 @@ import AlertIcon from "src/assets/icons/alert-icon.svg";
 
 const InputField = ({ name, type = "text", value, onChange, error, label }) => {
   return (
-    <div className="w-full">
+    <div className="w-full mb-4">
       <label htmlFor={name} className="text-xs font-medium">
         {label}
       </label>
@@ -11,7 +11,7 @@ const InputField = ({ name, type = "text", value, onChange, error, label }) => {
         type={type}
         value={value}
         autoComplete="off"
-        className={`w-full p-2 text-sm rounded-md border border-solid ${
+        className={`w-full p-2 text-sm rounded-md border bg-transparent ${
           error ? "border-red-500" : "border-black/10"
         }`}
         onChange={onChange}

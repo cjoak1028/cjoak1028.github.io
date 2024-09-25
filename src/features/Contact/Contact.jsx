@@ -52,17 +52,16 @@ const Contact = ({ propRef }) => {
   );
 
   return (
-    <div className="w-full max-w-lg">
-      <SectionLayout
-        title="Say hello 👋"
-        subTitle="Get in touch with me via email or social media."
-        propRef={propRef}
-      >
-        <form
-          noValidate
-          className="content gap-4 mt-10"
-          onSubmit={handleSubmit}
-        >
+    <section
+      className="py-8 sm:py-24 scroll-m-[6.25rem] sm:scroll-m-[8.25rem] px-6 bg-slate-50 flex justify-center items-center"
+      ref={propRef}
+    >
+      <div className="w-full max-w-md">
+        <h2 className="heading-md uppercase text-center">Say Hello 👋</h2>
+        <h3 className="heading-sm leading-snug mt-2 text-center">
+          Get in touch with me via email or social media.
+        </h3>
+        <form noValidate className="content mt-10" onSubmit={handleSubmit}>
           <InputField
             name="name"
             label="Name"
@@ -86,7 +85,7 @@ const Contact = ({ propRef }) => {
               name="message"
               value={formData.message}
               autoComplete="off"
-              className={`block w-full p-2 text-sm rounded-md border border-solid ${
+              className={`block w-full p-2 text-sm rounded-md border border-solid bg-transparent ${
                 errors.message ? "border-red-500" : "border-black/10"
               }`}
               rows="5"
@@ -96,14 +95,14 @@ const Contact = ({ propRef }) => {
           </div>
           <button
             type="submit"
-            className="primary-button flex items-center justify-center w-full sm:w-40 sm:self-end"
+            className="primary-button flex items-center justify-center w-full sm:w-40 mt-10"
             disabled={loading}
           >
             {loading ? <LoadingAnimation /> : "Send message"}
           </button>
         </form>
-      </SectionLayout>
-    </div>
+      </div>
+    </section>
   );
 };
 
