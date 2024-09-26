@@ -5,7 +5,7 @@ import LinkedInWhiteIcon from "src/assets/logos/linkedin-logo-white.svg";
 import GithubWhiteIcon from "src/assets/logos/github-logo-white.svg";
 import InstagramWhiteIcon from "src/assets/logos/instagram-logo-white.svg";
 
-const SocialLinks = ({ isWhite = false }) => {
+const SocialLinks = ({ isWhite = false, customStyle = "" }) => {
   const LinkedInIcon = isWhite ? LinkedInWhiteIcon : LinkedInBlackIcon;
   const GithubIcon = isWhite ? GithubWhiteIcon : GithubBlackIcon;
   const InstagramIcon = isWhite ? InstagramWhiteIcon : InstagramBlackIcon;
@@ -29,7 +29,7 @@ const SocialLinks = ({ isWhite = false }) => {
   ];
 
   return (
-    <div className="flex flex-row gap-5 md:gap-7">
+    <div className={`flex flex-row gap-5 md:gap-7 ${customStyle}`}>
       {socialLinks.map((socialLink) => {
         const { social, link, icon } = socialLink;
         return (

@@ -52,7 +52,7 @@ const Contact = ({ propRef }) => {
   );
 
   return (
-    <ScrollToSection propRef={propRef} backgroundColor="bg-gray">
+    <ScrollToSection propRef={propRef}>
       <div className="w-full max-w-md m-auto">
         <h2 className="heading-md uppercase text-center">Say Hello 👋</h2>
         <h3 className="heading-sm leading-snug mt-2 text-center opacity-60">
@@ -96,7 +96,7 @@ const Contact = ({ propRef }) => {
           </div>
           <button
             type="submit"
-            className="primary-button flex items-center justify-center w-full sm:w-40 mt-10 self-end"
+            className="primary-button flex items-center justify-center w-full sm:w-40 mt-10 self-center"
             disabled={loading}
           >
             {loading ? <LoadingAnimation /> : "Send message"}

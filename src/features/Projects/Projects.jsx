@@ -5,6 +5,7 @@ import PhotosnapThumbnail from "src/assets/thumbnails/photosnap.jpg";
 import PlanetsThumbnail from "src/assets/thumbnails/planets.jpg";
 import Project from "src/features/Projects/Project";
 import ScrollToSection from "src/components/ScrollToSection";
+import TextArrowLink from "src/components/TextArrowLink";
 
 const imageMap = {
   entertainment: EntertainmentThumbnail,
@@ -50,17 +51,12 @@ const Projects = ({ propRef }) => {
                 />
               );
             })}
-          <a
-            className="self-end font-medium hover:opacity-60 transition-opacity cursor-pointer group mt-3 sm:mt-5"
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://github.com/cjoak1028"
-          >
-            View more projects{" "}
-            <span className="inline-block transition-transform transform group-hover:translate-x-2">
-              &rarr;
-            </span>
-          </a>
+          <div className="text-end mt-3">
+            <TextArrowLink
+              label="View more projects"
+              link="https://github.com/cjoak1028"
+            />
+          </div>
         </div>
       </div>
     </ScrollToSection>
