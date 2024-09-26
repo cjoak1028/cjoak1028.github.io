@@ -7,7 +7,7 @@ import ScrollToSection from "src/components/ScrollToSection";
 const Hero = () => {
   return (
     <ScrollToSection>
-      <div className="flex flex-col justify-center gap-8 md:justify-between w-full">
+      <div className="flex flex-col gap-8">
         <div className="">
           <img
             src={HeroPhoto}
@@ -17,11 +17,11 @@ const Hero = () => {
             sequence={[1000, "I'm CJ Kim"]}
             wrapper="span"
             cursor={true}
-            className="text-3xl sm:text-4xl flex items-center h-6 sm:h-8 sm:w-[13rem] md:w-[22rem] md:text-5xl xl:text-6xl md:h-12 xl:h-14 font-semibold"
+            className="text-3xl sm:text-4xl flex items-center h-6 md:text-5xl md:h-12  font-semibold w-full"
           />
         </div>
-        <div className="w-full max-w-[18.75rem] sm:max-w-[20rem] md:max-w-[28rem] xl:max-w-[26rem]">
-          <h2 className="font-medium text-xl sm:text-2xl md:text-4xl mb-2 md:mb-4">
+        <div className="w-full max-w-[16rem] sm:max-w-[20rem]">
+          <h2 className="font-medium text-xl sm:text-2xl mb-2">
             A Frontend Developer based in Toronto, Canada.
           </h2>
           <h3 className="font-medium text-xs sm:text-sm md:text-base opacity-60 leading-snug">
