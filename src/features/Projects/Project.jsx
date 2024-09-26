@@ -13,14 +13,14 @@ const Project = ({
 }) => {
   return (
     <div
-      className={`flex flex-col gap-3 md:gap-14 lg:flex-col lg:gap-3 xl:gap-14 ${
+      className={`flex flex-col gap-3 sm:gap-12 lg:flex-col lg:gap-3 xl:gap-12 ${
         reverse
-          ? "md:flex-row-reverse xl:flex-row-reverse"
-          : "md:flex-row xl:flex-row"
+          ? "sm:flex-row-reverse xl:flex-row-reverse"
+          : "sm:flex-row xl:flex-row"
       }`}
     >
-      <div className="flex flex-col gap-3 md:w-3/5 lg:w-full xl:w-1/2">
-        <h4 className="text-base font-medium self-start md:hidden lg:block xl:hidden">
+      <div className="flex flex-col gap-3 sm:w-1/2 lg:w-full xl:w-1/2">
+        <h4 className="text-base font-medium self-start sm:hidden lg:block xl:hidden">
           {title}
         </h4>
         <img
@@ -29,8 +29,8 @@ const Project = ({
           alt={`${title} thumbnail`}
         />
       </div>
-      <div className="flex flex-col gap-3 items-center md:w-2/5 md:justify-between md:h-5/6 self-center lg:w-full xl:w-1/2 xl:justify-between">
-        <h4 className="heading-sm hidden md:block text-center lg:hidden xl:block">
+      <div className="flex flex-col gap-3 items-center sm:w-1/2 sm:justify-between self-center lg:w-full xl:w-1/2 xl:justify-between">
+        <h4 className="heading-sm hidden sm:block text-center lg:hidden xl:block">
           {title}
         </h4>
         <p className="text-center leading-snug font-light">{description}</p>
