@@ -20,18 +20,16 @@ const Home = () => {
           Contact: contactRef,
         }}
       />
-      <div className="flex flex-col lg:flex-row lg:px-24">
+      <div className="flex flex-col lg:flex-row py-12 lg:py-0 px-6 sm:px-12 lg:px-24 lg:max-w-screen-xl mx-auto">
         <div className="lg:w-1/2 lg:sticky lg:top-[8.25rem] lg:h-[calc(100vh-8.25rem)] lg:py-24">
           <Hero />
         </div>
-        <div className="lg:w-1/2 lg:py-24">
-          <main>
-            <About propRef={aboutRef} />
-            <Projects propRef={projectsRef} />
-            <Contact propRef={contactRef} />
-          </main>
+        <main className="lg:w-1/2 pt-24 lg:py-24">
+          <About propRef={aboutRef} />
+          <Projects propRef={projectsRef} />
+          <Contact propRef={contactRef} />
           <Footer />
-        </div>
+        </main>
       </div>
     </div>
   );

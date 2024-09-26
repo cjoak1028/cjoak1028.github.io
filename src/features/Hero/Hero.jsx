@@ -5,7 +5,7 @@ import SocialLinks from "src/components/SocialLinks";
 
 const Hero = () => {
   return (
-    <div className="flex flex-col lg:h-full lg:justify-between py-12 md:py-24 px-6 sm:px-12 lg:px-0 lg:py-0">
+    <div className="flex flex-col lg:h-full lg:justify-between">
       <div>
         <img
           src={HeroPhoto}
@@ -22,8 +22,7 @@ const Hero = () => {
             A Frontend Developer based in Toronto, Canada.
           </h2>
           <h3 className="font-medium text-xs sm:text-sm md:text-base opacity-60 leading-snug">
-            I love to design and build anything, most especially things on the
-            web.
+            I love to design and build things, especially things on the web.
           </h3>
           {/* <TechStack /> */}
         </div>
