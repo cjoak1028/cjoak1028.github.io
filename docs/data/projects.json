@@ -1,0 +1,34 @@
+[
+    {
+        "title": "Entertainment Web App",
+        "thumbnail": "entertainment",
+        "description": "An entertainment web app that allows users to browse and bookmark movies and TV shows",
+        "stack": ["React", "Tailwind CSS"],
+        "repoLink": "https://github.com/cjoak1028/entertainment-web-app"
+    },
+    {
+        "title": "Dictionary",
+        "thumbnail": "dictionary",
+        "description": "A dictionary web app integrated with the Free Dictionary API",
+        "stack": ["React", "Tailwind CSS"],
+        "repoLink": "https://github.com/cjoak1028/dictionary-web-app",
+        "demoLink": "https://dictionary-web-app-7wod.vercel.app/"
+    },
+    {
+        "title": "Photosnap",
+        "thumbnail": "photosnap",
+        "description": "A multi-page marketing website for a photo-sharing application",
+        "stack": ["HTML", "Sass", "JavaScript"],
+        "repoLink": "https://github.com/cjoak1028/photosnap-multi-page-website",
+        "demoLink": "https://photosnap-multi-page-website-theta.vercel.app/"
+    },
+    {
+        "title": "Planets",
+        "thumbnail": "planets",
+        "description": "A multi-page website showcasing each planet in our solar system",
+        "stack": ["HTML", "Sass", "JavaScript"],
+        "repoLink": "https://github.com/cjoak1028/planets-fact-site",
+        "demoLink": "https://planets-fact-site-sand.vercel.app/"
+    }
+]
+  
