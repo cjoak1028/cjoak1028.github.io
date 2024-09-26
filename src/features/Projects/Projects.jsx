@@ -51,7 +51,7 @@ const Projects = ({ propRef }) => {
               );
             })}
           <a
-            className="self-end font-medium hover:opacity-60 transition-opacity cursor-pointer group mt-3 sm:mt-5"
+            className="self-end font-medium hover:opacity-60 transition-opacity cursor-pointer group"
             target="_blank"
             rel="noopener noreferrer"
             href="https://github.com/cjoak1028"

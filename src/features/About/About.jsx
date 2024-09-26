@@ -5,8 +5,10 @@ import ScrollToSection from "src/components/ScrollToSection";
 const About = ({ propRef }) => {
   return (
     <ScrollToSection propRef={propRef}>
-      <h2 className="heading-md uppercase md:hidden mb-3">About me ✌️</h2>
-      <div className="flex flex-col md:flex-row w-full">
+      <h2 className="heading-md uppercase md:hidden mb-3 lg:block">
+        About me ✌️
+      </h2>
+      <div className="flex flex-col md:flex-row lg:flex-col w-full">
         <img
           src={AboutMobile}
           className="w-full h-auto md:hidden rounded-xl mb-3"
@@ -14,11 +16,11 @@ const About = ({ propRef }) => {
         />
         <img
           src={AboutDesktop}
-          className="w-1/3 h-1/3 hidden md:block rounded-xl mr-12"
+          className="w-1/3 h-1/3 hidden md:block lg:hidden rounded-xl mr-12"
           alt="Photo of CJ"
         />
         <div className="mb-3">
-          <h2 className="heading-md uppercase hidden md:block mb-3">
+          <h2 className="heading-md uppercase hidden md:block lg:hidden mb-3">
             About me ✌️
           </h2>
           <p>
