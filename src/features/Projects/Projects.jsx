@@ -19,7 +19,7 @@ const Projects = ({ propRef }) => {
 
   return (
     <ScrollToSection propRef={propRef}>
-      <div className="w-full max-w-[32.5rem] md:max-w-2xl">
+      <div className="w-full">
         <h2 className="heading-md uppercase">My Projects 🧑🏻‍💻</h2>
         <h3 className="text-base font-medium leading-snug mt-2 opacity-60">
           Here are some projects that I put my heart and soul into!
