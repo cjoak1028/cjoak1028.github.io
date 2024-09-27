@@ -19,7 +19,7 @@ const About = ({ propRef }) => {
         When I’m not coding or designing, you’ll find me on my patio with a cup
         of joe in one hand and a book in the other, or at the gym hitting
         PR&apos;s. I also enjoy traveling, but no matter where I am, I stick to
-        my daily commitment of solving Leetcode problems!
+        my daily commitment to solving Leetcode problems!
       </p>
       <p>
         I’ve worked in startups, founded my own, and now I’m ready to embark on
