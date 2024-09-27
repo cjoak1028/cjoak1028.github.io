@@ -9,6 +9,7 @@ export default {
       black: '#282b2d',
       white: '#ffffff',
       gray: '#f8fafc',
+      red: '#ef4444',
       transparent: 'transparent',
     }
   },
