@@ -12,14 +12,14 @@ const About = ({ propRef }) => {
       </h2>
       <p className="mb-4">
         Hello! I’m CJ, a passionate Frontend Developer based in Toronto, Canada.
-        I love designing and building pixel-perfect, engaging, and accessible
-        web experiences.
+        I love to design and build pixel-perfect, engaging, and accessible web
+        experiences.
       </p>
       <p className="mb-4">
         When I’m not coding or designing, you’ll find me on my patio with a cup
         of joe in one hand and a book in the other, or at the gym hitting
         PR&apos;s. I also enjoy traveling, but no matter where I am, I stick to
-        my commitment of solving a Leetcode problem every day!
+        my daily commitment of solving Leetcode problems!
       </p>
       <p>
         I’ve worked in startups, founded my own, and now I’m ready to embark on
