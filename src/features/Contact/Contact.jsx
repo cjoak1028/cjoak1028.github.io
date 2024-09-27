@@ -87,7 +87,7 @@ const Contact = ({ propRef }) => {
               value={formData.message}
               autoComplete="off"
               className={`block w-full p-2 text-sm rounded-md border border-solid bg-transparent ${
-                errors.message ? "border-red-500" : "border-black/10"
+                errors.message ? "border-red" : "border-black/10"
               }`}
               rows="5"
               onChange={handleInputChange}

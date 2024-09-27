@@ -12,7 +12,7 @@ const InputField = ({ name, type = "text", value, onChange, error, label }) => {
         value={value}
         autoComplete="off"
         className={`w-full p-2 text-sm rounded-md border bg-transparent ${
-          error ? "border-red-500" : "border-black/10"
+          error ? "border-red" : "border-black/10"
         }`}
         onChange={onChange}
       />
