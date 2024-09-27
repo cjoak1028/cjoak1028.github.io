@@ -24,7 +24,7 @@ const About = ({ propRef }) => {
       <p>
         I’ve worked in a startup, founded my own, and now I’m ready to embark on
         a new adventure — one filled with learning, collaboration, and growth as
-        I strive to become the best front-end developer I can be. Feel free to
+        I strive to become the best frontend developer I can be. Feel free to
         reach out!
       </p>
       <div className="text-end mt-3">
