@@ -17,12 +17,12 @@ const About = ({ propRef }) => {
       </p>
       <p className="mb-4">
         When I’m not coding or designing, you’ll find me on my patio with a cup
-        of joe in one hand and a book in the other, or at the gym hitting
-        PR&apos;s. I also enjoy traveling, but no matter where I am, I stick to
-        my daily commitment to solving Leetcode problems!
+        of joe in one hand and a book in the other, or at the gym hitting PRs. I
+        also enjoy traveling, but no matter where I am, I stick to my daily
+        commitment to solving Leetcode problems!
       </p>
       <p>
-        I’ve worked in startups, founded my own, and now I’m ready to embark on
+        I’ve worked in a startup, founded my own, and now I’m ready to embark on
         a new adventure — one filled with learning, collaboration, and growth as
         I strive to become the best front-end developer I can be. Feel free to
         reach out!
